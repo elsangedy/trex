@@ -1,0 +1,19 @@
+@use 'sass:color';
+
+@use '@material/theme/color-palette';
+
+@use '@material/theme/index' as theme with (
+	$primary: #e21c21,
+	$secondary: #252128,
+	$surface: #fff,
+	$background: #fff,
+	$error: color-palette.$red-900
+);
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: theme.$surface;
+	color: theme.$on-surface;
+}

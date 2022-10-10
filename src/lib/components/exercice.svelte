@@ -1,0 +1,24 @@
+<script type="ts">
+  import * as List from '@smui/list'
+
+  export let name: string
+  export let sets: number
+  export let reps: number
+  export let repsMax: number | undefined = undefined
+  export let weight: number | undefined = undefined
+  export let weightPercent: number | undefined = undefined
+
+  $: weightComputed = weight ? (weight * (weightPercent || 100)) / 100 : false
+</script>
+
+<List.Item>
+  <List.Text>
+    <List.PrimaryText>{name}</List.PrimaryText>
+    <List.SecondaryText>{sets} x {reps}{#if repsMax}~{repsMax}{/if}reps</List.SecondaryText>
+  </List.Text>
+  {#if weightComputed}
+  <List.Meta>
+    {weightComputed}kg {#if weightPercent}({weightPercent}%){/if}
+  </List.Meta>
+  {/if}
+</List.Item>
