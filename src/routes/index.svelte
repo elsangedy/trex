@@ -7,16 +7,13 @@
   import * as Button from '@smui/button'
   import * as Dialog from '@smui/dialog'
   import * as TopAppBar from '@smui/top-app-bar'
-  import * as Accordion from '@smui-extra/accordion'
 
   import { config } from '$lib/stores/config'
 
   import Exercice from '$lib/components/exercice.svelte'
 
   let topAppBar: TopAppBar.TopAppBarComponentDev
-  let open = $config.firstOpen
-
-  const dayOfWeek = new Date().getDay()
+  let open = $config.firstOpen || $config.group === 0 || $config.backSquat === 0 || $config.benchPress === 0
 
   $: isFormInvalid = $config.group === 0 || $config.backSquat === 0 || $config.benchPress === 0
 </script>
@@ -34,67 +31,15 @@
 
 <TopAppBar.AutoAdjust {topAppBar}>
   <div class="accordion-container">
-    <Accordion.default>
-      <Accordion.Panel open={dayOfWeek === 1}>
-        <Accordion.Header>
-          Segunda-feira
-          <span slot="description">90% do RM</span>
-        </Accordion.Header>
-        <Accordion.Content>
-          <List twoLine>
-            <Exercice name="Back Squat (Reconhecimento)" sets={1} reps={6} repsMax={12} weight={$config.backSquat} weightPercent={50} />
-            <Exercice name="Back Squat (Warm-up)" sets={1} reps={6} repsMax={12} weight={$config.backSquat} weightPercent={70} />
-            <Exercice name="Back Squat" sets={1} reps={2} repsMax={3} weight={$config.backSquat} weightPercent={90} />
-            <Exercice name="Bench Press (Reconhecimento)" sets={1} reps={6} repsMax={12} weight={$config.benchPress} weightPercent={50} />
-            <Exercice name="Bench Press (Warm-up)" sets={1} reps={6} repsMax={12} weight={$config.benchPress} weightPercent={70} />
-            <Exercice name="Bench Press" sets={1} reps={2} repsMax={3} weight={$config.benchPress} weightPercent={90} />
-            <Exercice name="Front Ball Slam" sets={3} reps={8} repsMax={12} />
-            <Exercice name="Pull Ups" sets={3} reps={8} repsMax={12} />
-            <Exercice name="1 Leg RDL" sets={3} reps={8} repsMax={12} />
-          </List>
-        </Accordion.Content>
-      </Accordion.Panel>
-
-      <Accordion.Panel open={dayOfWeek === 3}>
-        <Accordion.Header>
-          Quarta-feira
-          <span slot="description">85% do RM</span>
-        </Accordion.Header>
-        <Accordion.Content>
-          <List twoLine>
-            <Exercice name="Back Squat (Reconhecimento)" sets={1} reps={6} repsMax={12} weight={$config.backSquat} weightPercent={50} />
-            <Exercice name="Back Squat (Warm-up)" sets={1} reps={6} repsMax={12} weight={$config.backSquat} weightPercent={70} />
-            <Exercice name="Back Squat" sets={1} reps={3} repsMax={4} weight={$config.backSquat} weightPercent={85} />
-            <Exercice name="Bench Press (Reconhecimento)" sets={1} reps={6} repsMax={12} weight={$config.benchPress} weightPercent={50} />
-            <Exercice name="Bench Press (Warm-up)" sets={1} reps={6} repsMax={12} weight={$config.benchPress} weightPercent={70} />
-            <Exercice name="Bench Press" sets={1} reps={3} repsMax={4} weight={$config.benchPress} weightPercent={85} />
-            <Exercice name="Banded Spider Jump" sets={3} reps={8} repsMax={12} />
-            <Exercice name="Inverted Row" sets={3} reps={8} repsMax={12} />
-            <Exercice name="1 Leg Plyo Curl" sets={3} reps={8} repsMax={12} />
-          </List>
-        </Accordion.Content>
-      </Accordion.Panel>
-
-      <Accordion.Panel open={dayOfWeek === 5}>
-        <Accordion.Header>
-          Sexta-feira
-          <span slot="description">95% do RM</span>
-        </Accordion.Header>
-        <Accordion.Content>
-          <List twoLine>
-            <Exercice name="Back Squat (Reconhecimento)" sets={1} reps={6} repsMax={12} weight={$config.backSquat} weightPercent={50} />
-            <Exercice name="Back Squat (Warm-up)" sets={1} reps={6} repsMax={12} weight={$config.backSquat} weightPercent={70} />
-            <Exercice name="Back Squat" sets={1} reps={1} repsMax={2} weight={$config.backSquat} weightPercent={95} />
-            <Exercice name="Bench Press (Reconhecimento)" sets={1} reps={6} repsMax={12} weight={$config.benchPress} weightPercent={50} />
-            <Exercice name="Bench Press (Warm-up)" sets={1} reps={6} repsMax={12} weight={$config.benchPress} weightPercent={70} />
-            <Exercice name="Bench Press" sets={1} reps={1} repsMax={2} weight={$config.benchPress} weightPercent={95} />
-            <Exercice name="Lateral Ball Slam" sets={3} reps={8} repsMax={12} />
-            <Exercice name="Shoulder Complex" sets={3} reps={8} repsMax={12} />
-            <Exercice name="1 Leg Hip Lift" sets={3} reps={8} repsMax={12} />
-          </List>
-        </Accordion.Content>
-      </Accordion.Panel>
-    </Accordion.default>
+    <List twoLine>
+      <Exercice name="Back Squat (Reconhecimento)" sets={1} reps={6} repsMax={12} weight={$config.backSquat} weightPercent={50} />
+      <Exercice name="Back Squat" sets={$config.group} reps={3} repsMax={4} weight={$config.backSquat} weightPercent={60} />
+      <Exercice name="Bench Press (Reconhecimento)" sets={1} reps={6} repsMax={12} weight={$config.benchPress} weightPercent={50} />
+      <Exercice name="Bench Press" sets={$config.group} reps={3} repsMax={4} weight={$config.benchPress} weightPercent={60} />
+      <Exercice name="1 Leg Hip Lift + Shoulder Complex" sets={3} reps={8} repsMax={12} />
+      <Exercice name="Lateral Ball Slam + Front Ball Slam" sets={3} reps={8} repsMax={12} />
+      <Exercice name="1 Leg RDL + Banded Spider Jump" sets={3} reps={8} repsMax={12} />
+    </List>
   </div>
 </TopAppBar.AutoAdjust>
 
@@ -144,7 +89,7 @@
     </div>
   </Dialog.Content>
   <Dialog.Actions style="justify-content: space-between;">
-    <span class="version">v1.1.0</span>
+    <span class="version">v1.2.0</span>
     <Button.default action="accept" disabled={isFormInvalid}>
       <Button.Label>Fechar</Button.Label>
     </Button.default>
