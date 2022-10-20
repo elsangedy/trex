@@ -12,7 +12,7 @@
   import Exercice from '$lib/components/exercice.svelte'
 
   let topAppBar: TopAppBar.TopAppBarComponentDev
-  let open = $config.firstOpen
+  let open = $config.clean === 0 || $config.deadlift === 0 || $config.backSquat === 0 || $config.benchPress === 0
 
   const dayOfWeek = new Date().getDay()
 
@@ -40,8 +40,8 @@
         <Accordion.Content>
           <List twoLine>
             <Exercice name="Clean" sets={5} reps={3} weight={$config.clean} weightPercent={80} weightPercentMax={90} />
-            <Exercice name="Back Squat + Box Jumps" sets={3} reps="3 + 5" weight={$config.backSquat} weightPercent={80} weightPercentMax={90} />
-            <Exercice name="Pull Ups + Ball Slam" sets={3} reps="5 + 5" />
+            <Exercice name="Back Squat + Box Jumps" sets={3} reps="3 + 5" weight={$config.backSquat} weightPercent={80} weightPercentMax={90} video="/back-squat-box-jump.mp4" />
+            <Exercice name="Pull Ups + Ball Slam" sets={3} reps="5 + 5" video="/pull-up-ball-slam.mp4" />
             <Exercice name="Kaneeing 1 Arm DB Press" sets={3} reps="8 + 8" />
             <Exercice name="Front Ball Slam" sets={3} reps="8 + 8" />
           </List>
@@ -55,8 +55,8 @@
         <Accordion.Content>
           <List twoLine>
             <Exercice name="Clean" sets={5} reps={3} weight={$config.clean} weightPercent={80} weightPercentMax={90} />
-            <Exercice name="Deadlift + Broad Jumps" sets={3} reps="3 + 5" weight={$config.deadlift} weightPercent={80} weightPercentMax={90} />
-            <Exercice name="Bench Pres + Plyo Push Ups" sets={3} reps="3 + 10" weight={$config.benchPress} weightPercent={80} weightPercentMax={90} />
+            <Exercice name="Deadlift + Broad Jumps" sets={3} reps="3 + 5" weight={$config.deadlift} weightPercent={80} weightPercentMax={90} video="/deadlift-broad-jump.mp4" />
+            <Exercice name="Bench Pres + Plyo Push Ups" sets={3} reps="3 + 10" weight={$config.benchPress} weightPercent={80} weightPercentMax={90} video="/bench-press-plyo-push-up.mp4" />
             <Exercice name="Split Squat" sets={3} reps="8 + 8" />
             <Exercice name="Lateral Ball Slam" sets={3} reps="8 + 8" />
           </List>
@@ -130,7 +130,7 @@
     </div>
   </Dialog.Content>
   <Dialog.Actions style="justify-content: space-between;">
-    <span class="version">v1.3.0</span>
+    <span class="version">v1.4.0</span>
     <Button.default action="accept" disabled={isFormInvalid}>
       <Button.Label>Fechar</Button.Label>
     </Button.default>

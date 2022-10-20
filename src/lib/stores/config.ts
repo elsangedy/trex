@@ -6,7 +6,6 @@ interface Config {
 	deadlift: number;
 	backSquat: number;
 	benchPress: number;
-	firstOpen: boolean;
 }
 
 const getConfig = (): Config => {
@@ -15,19 +14,12 @@ const getConfig = (): Config => {
 		clean: storageConfig.clean || 0,
 		deadlift: storageConfig.deadlift || 0,
 		backSquat: storageConfig.backSquat || 0,
-		benchPress: storageConfig.benchPress || 0,
-		firstOpen: storageConfig.firstOpen || true
+		benchPress: storageConfig.benchPress || 0
 	};
 };
 
 export const config = writable<Config>(getConfig());
 
 config.subscribe((value) => {
-	localStorage.setItem(
-		'config',
-		JSON.stringify({
-			...value,
-			firstOpen: false
-		})
-	);
+	localStorage.setItem('config', JSON.stringify(value));
 });
