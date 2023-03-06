@@ -13,15 +13,9 @@
 		<Accordion.Header>Segunda-feira</Accordion.Header>
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
-				<Exercice
-					name="Warmup / Core"
-					sets={1}
-					time="10min"
-					media="/media/warmup.png"
-					kind="warmup"
-				/>
+				<Exercice name="Warmup / Core" media="/media/warmup.png" kind="warmup" />
 				<Separator.default />
-				<Exercice name="Clean Complex" sets={1} time="5min" kind="skill" />
+				<Exercice name="Clean Complex" kind="skill" />
 				<Separator.default />
 				<Exercice
 					name="Hang Power Clean"
@@ -62,15 +56,9 @@
 		<Accordion.Header>Terça-feira</Accordion.Header>
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
-				<Exercice
-					name="Warmup / Core"
-					sets={1}
-					time="10min"
-					media="/media/warmup.png"
-					kind="warmup"
-				/>
+				<Exercice name="Warmup / Core" media="/media/warmup.png" kind="warmup" />
 				<Separator.default />
-				<Exercice name="ATY" sets={1} time="10min" kind="skill" />
+				<Exercice name="ATY" kind="skill" />
 				<Separator.default />
 				<Exercice name="Deadlift" sets={5} reps={5} kind="power" media="/media/deadlift-side.gif" />
 				<Separator.default />
@@ -95,15 +83,9 @@
 		<Accordion.Header>Quinta-feira</Accordion.Header>
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
-				<Exercice
-					name="Warmup / Core"
-					sets={1}
-					time="10min"
-					media="/media/warmup.png"
-					kind="warmup"
-				/>
+				<Exercice name="Warmup / Core" media="/media/warmup.png" kind="warmup" />
 				<Separator.default />
-				<Exercice name="Clean Complex" sets={1} time="10min" kind="skill" />
+				<Exercice name="Clean Complex" kind="skill" />
 				<Separator.default />
 				<Exercice
 					name="Hang Squat Clean"
@@ -145,15 +127,9 @@
 		<Accordion.Header>Sexta-feira</Accordion.Header>
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
-				<Exercice
-					name="Warmup / Core"
-					sets={1}
-					time="10min"
-					media="/media/warmup.png"
-					kind="warmup"
-				/>
+				<Exercice name="Warmup / Core" media="/media/warmup.png" kind="warmup" />
 				<Separator.default />
-				<Exercice name="Tempo Squat" sets={1} time="10min" kind="skill" />
+				<Exercice name="Tempo Squat" kind="skill" />
 				<Separator.default />
 				<Exercice
 					name="Front Squat"

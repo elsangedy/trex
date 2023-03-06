@@ -4,7 +4,7 @@
 	import * as Dialog from '@smui/dialog';
 
 	export let name: string;
-	export let sets: number;
+	export let sets: number | undefined = undefined;
 	export let reps: number | string | undefined = undefined;
 	export let time: number | string | undefined = undefined;
 	export let repsMax: number | undefined = undefined;
@@ -27,10 +27,12 @@
 
 <List.Item on:click={handleOpen} class={kind}>
 	<List.Text>
-		<List.PrimaryText>{name}</List.PrimaryText>
-		<List.SecondaryText>
-			{sets} x {#if reps}{reps}{#if repsMax}~{repsMax}{/if}reps{:else}{time}{/if}
-		</List.SecondaryText>
+		<List.PrimaryText class={sets ? undefined : 'no-sets'}>{name}</List.PrimaryText>
+		{#if sets}
+			<List.SecondaryText>
+				{sets} x {#if reps}{reps}{#if repsMax}~{repsMax}{/if}reps{:else}{time}{/if}
+			</List.SecondaryText>
+		{/if}
 	</List.Text>
 	{#if weightComputed}
 		<List.Meta>
@@ -66,6 +68,10 @@
 {/if}
 
 <style>
+	:global(.no-sets) {
+		margin-top: 3px !important;
+		line-height: 56px !important;
+	}
 	.media {
 		max-width: 100%;
 	}
