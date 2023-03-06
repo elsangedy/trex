@@ -25,7 +25,7 @@
 					media="/media/hang-power-clean.gif"
 				/>
 				<Separator.default />
-				<Exercice name="Back Squat" sets={5} reps={5} kind="power" />
+				<Exercice name="Back Squat" sets={5} reps={5} kind="power" media="/media/back-squat.gif" />
 				<Separator.default />
 				<Exercice
 					name="1 Arm DB Bench Press"
