@@ -67,7 +67,7 @@
 
 <style>
 	.media {
-		width: 100%;
+		max-width: 100%;
 	}
 	:global(.media-content) {
 		padding: 0 !important;
