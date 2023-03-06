@@ -58,8 +58,6 @@
 			<List.default twoLine>
 				<Exercice name="Warmup / Core" media="/media/warmup.png" kind="warmup" />
 				<Separator.default />
-				<Exercice name="ATY" kind="skill" />
-				<Separator.default />
 				<Exercice name="Deadlift" sets={5} reps={5} kind="power" media="/media/deadlift-side.gif" />
 				<Separator.default />
 				<Exercice name="Push Press" sets={5} reps={5} kind="power" media="/media/push-press.gif" />
@@ -128,8 +126,6 @@
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
 				<Exercice name="Warmup / Core" media="/media/warmup.png" kind="warmup" />
-				<Separator.default />
-				<Exercice name="Tempo Squat" kind="skill" />
 				<Separator.default />
 				<Exercice
 					name="Front Squat"
