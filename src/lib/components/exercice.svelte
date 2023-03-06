@@ -12,6 +12,7 @@
 	export let weightPercent: number | undefined = undefined;
 	export let weightPercentMax: number | undefined = undefined;
 	export let media: string | undefined = undefined;
+	export let kind: 'warmup' | 'skill' | 'power' | undefined = undefined;
 
 	$: weightComputed = weight ? (weight * (weightPercent || 100)) / 100 : false;
 	$: weightMaxComputed = weight ? (weight * (weightPercentMax || 100)) / 100 : false;
@@ -24,7 +25,7 @@
 	};
 </script>
 
-<List.Item on:click={handleOpen}>
+<List.Item on:click={handleOpen} class={kind}>
 	<List.Text>
 		<List.PrimaryText>{name}</List.PrimaryText>
 		<List.SecondaryText>
@@ -67,5 +68,14 @@
 <style>
 	.media {
 		width: 100%;
+	}
+	:global(.warmup) {
+		background-color: rgb(0 255 252 / 24%);
+	}
+	:global(.skill) {
+		background-color: rgb(254 255 0 / 24%);
+	}
+	:global(.power) {
+		background-color: rgb(255 153 0 / 24%);
 	}
 </style>
