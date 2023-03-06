@@ -54,7 +54,7 @@
 		<Dialog.Header>
 			<Dialog.Title id="media-modal-title" style="margin-left: 8px;">{name}</Dialog.Title>
 		</Dialog.Header>
-		<Dialog.Content id="media-modal-content">
+		<Dialog.Content id="media-modal-content" class="media-content">
 			<img src={media} class="media" alt={name} />
 		</Dialog.Content>
 		<Dialog.Actions>
@@ -68,6 +68,9 @@
 <style>
 	.media {
 		width: 100%;
+	}
+	:global(.media-content) {
+		padding: 0 !important;
 	}
 	:global(.warmup) {
 		background-color: rgb(0 255 252 / 24%);
