@@ -74,9 +74,12 @@
 	}
 	.media {
 		max-width: 100%;
+		margin: 0 auto;
 	}
 	:global(.media-content) {
 		padding: 0 !important;
+		display: flex;
+		align-items: center;
 	}
 	:global(.warmup) {
 		background-color: rgb(0 255 252 / 24%);
