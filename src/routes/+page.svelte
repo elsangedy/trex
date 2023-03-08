@@ -48,7 +48,7 @@
 					media="/media/kneeling-low-to-high-woodchop.gif"
 				/>
 				<Separator.default />
-				<Exercice name="Cool Down" sets={1} time="5min" />
+				<Exercice name="Cool Down" />
 			</List.default>
 		</Accordion.Content>
 	</Accordion.Panel>
@@ -73,7 +73,7 @@
 				/>
 				<Exercice name="AB Wheel Rollout" sets={3} reps={12} media="/media/ab-wheel-rollout.gif" />
 				<Separator.default />
-				<Exercice name="Cool Down" sets={1} time="5min" />
+				<Exercice name="Cool Down" />
 			</List.default>
 		</Accordion.Content>
 	</Accordion.Panel>
@@ -117,7 +117,7 @@
 				/>
 				<Exercice name="Wall Ball Throw" sets={3} reps="8 + 8" media="/media/wall-ball-throw.gif" />
 				<Separator.default />
-				<Exercice name="Cool Down" sets={1} time="5min" />
+				<Exercice name="Cool Down" />
 			</List.default>
 		</Accordion.Content>
 	</Accordion.Panel>
@@ -156,7 +156,7 @@
 				<Exercice name="Bicep Curls" sets={3} reps="10 + 10" media="/media/bicep-curls.gif" />
 				<Exercice name="Skull Crushers" sets={3} reps="10 + 10" media="/media/skull-crushers.gif" />
 				<Separator.default />
-				<Exercice name="Cool Down" sets={1} time="5min" />
+				<Exercice name="Cool Down" />
 			</List.default>
 		</Accordion.Content>
 	</Accordion.Panel>
