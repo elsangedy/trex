@@ -19,13 +19,13 @@
 				<Separator.default />
 				<Exercice
 					name="Hang Power Clean"
-					sets={5}
+					sets={4}
 					reps={5}
 					kind="power"
 					media="/media/hang-power-clean.gif"
 				/>
 				<Separator.default />
-				<Exercice name="Back Squat" sets={5} reps={5} kind="power" media="/media/back-squat.gif" />
+				<Exercice name="Back Squat" sets={4} reps={5} kind="power" media="/media/back-squat.gif" />
 				<Separator.default />
 				<Exercice
 					name="1 Arm DB Bench Press"
@@ -58,9 +58,9 @@
 			<List.default twoLine>
 				<Exercice name="Warmup / Core" media="/media/warmup.png" kind="warmup" />
 				<Separator.default />
-				<Exercice name="Deadlift" sets={5} reps={5} kind="power" media="/media/deadlift-side.gif" />
+				<Exercice name="Deadlift" sets={4} reps={5} kind="power" media="/media/deadlift-side.gif" />
 				<Separator.default />
-				<Exercice name="Push Press" sets={5} reps={5} kind="power" media="/media/push-press.gif" />
+				<Exercice name="Push Press" sets={4} reps={5} kind="power" media="/media/push-press.gif" />
 				<Separator.default />
 				<Exercice name="1 Arm DB Row" sets={3} reps="8 + 8" media="/media/1-arm-db-row.gif" />
 				<Exercice name="BB Split Squat" sets={3} reps="8 + 8" media="/media/bb-split-squat.gif" />
@@ -87,7 +87,7 @@
 				<Separator.default />
 				<Exercice
 					name="Hang Squat Clean"
-					sets={5}
+					sets={4}
 					reps={5}
 					kind="power"
 					media="/media/hang-squat-clean.gif"
@@ -95,7 +95,7 @@
 				<Separator.default />
 				<Exercice
 					name="Bench Press"
-					sets={5}
+					sets={4}
 					reps={5}
 					kind="power"
 					media="/media/bench-press.gif"
@@ -127,15 +127,17 @@
 			<List.default twoLine>
 				<Exercice name="Warmup / Core" media="/media/warmup.png" kind="warmup" />
 				<Separator.default />
+				<Exercice name="Tempo Squat" kind="skill" />
+				<Separator.default />
 				<Exercice
 					name="Front Squat"
-					sets={5}
+					sets={4}
 					reps={5}
 					kind="power"
 					media="/media/front-squat.gif"
 				/>
 				<Separator.default />
-				<Exercice name="Pull Ups" sets={5} reps="MAX" kind="power" media="/media/pull-ups.gif" />
+				<Exercice name="Pull Ups" sets={4} reps="MAX" kind="power" media="/media/pull-ups.gif" />
 				<Separator.default />
 				<Exercice
 					name="Kneeling 1 Arm DB Press"
