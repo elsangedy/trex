@@ -35,12 +35,7 @@
 				/>
 				<Exercice name="Lateral Step Up" sets={3} reps="8 + 8" media="/media/lateral-step-up.gif" />
 				<Separator.default />
-				<Exercice
-					name="1 DB 1 Leg RDL"
-					sets={3}
-					reps="8 + 8"
-					media="/media/1-db-1-leg-rdl-side.gif"
-				/>
+				<Exercice name="1 DB 1 Leg RDL" sets={3} reps="8 + 8" media="/media/1-db-1-leg-rdl.gif" />
 				<Exercice
 					name="Kneeling Low To High Woodchop"
 					sets={3}
