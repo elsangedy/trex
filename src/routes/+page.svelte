@@ -22,15 +22,15 @@
 				<Exercice
 					name="Clean Pull"
 					sets={5}
-					reps={3}
+					reps={2}
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/clean-pull.gif`}
 				/>
 				<Separator.default />
 				<Exercice
 					name="Back Squat"
-					sets={4}
-					reps={5}
+					sets={3}
+					reps={3}
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/back-squat.gif`}
 				/>
@@ -73,16 +73,16 @@
 				<Separator.default />
 				<Exercice
 					name="Deadlift"
-					sets={4}
-					reps={5}
+					sets={3}
+					reps={3}
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/deadlift-side.gif`}
 				/>
 				<Separator.default />
 				<Exercice
 					name="Push Press"
-					sets={4}
-					reps={5}
+					sets={3}
+					reps={3}
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/push-press.gif`}
 				/>
@@ -128,15 +128,15 @@
 				<Exercice
 					name="Clean"
 					sets={5}
-					reps={3}
+					reps={2}
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/hang-squat-clean.gif`}
 				/>
 				<Separator.default />
 				<Exercice
 					name="Bench Press"
-					sets={4}
-					reps={5}
+					sets={3}
+					reps={3}
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/bench-press.gif`}
 				/>
@@ -181,8 +181,8 @@
 				<Separator.default />
 				<Exercice
 					name="Front Squat"
-					sets={4}
-					reps={5}
+					sets={3}
+					reps={3}
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/front-squat.gif`}
 				/>
