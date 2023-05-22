@@ -20,19 +20,6 @@
 		<p>Informe seus RMs e seu grupo para calcular a planilha</p>
 		<div class="input-container">
 			<Textfield
-				bind:value={$benchmarks.clean}
-				type="number"
-				variant="outlined"
-				label="Clean RM"
-				suffix="㎏"
-				style="width: 100%;"
-				input$pattern="\d+"
-				input$inputmode="numeric"
-				input$min={1}
-			/>
-		</div>
-		<div class="input-container">
-			<Textfield
 				bind:value={$benchmarks.deadlift}
 				type="number"
 				variant="outlined"
@@ -70,9 +57,22 @@
 				input$min={1}
 			/>
 		</div>
+		<div class="input-container">
+			<Textfield
+				bind:value={$benchmarks.shoulderPress}
+				type="number"
+				variant="outlined"
+				label="Shoulder Press RM"
+				suffix="㎏"
+				style="width: 100%;"
+				input$pattern="\d+"
+				input$inputmode="numeric"
+				input$min={1}
+			/>
+		</div>
 	</Dialog.Content>
 	<Dialog.Actions class="actions">
-		<span class="version">v2.0.0</span>
+		<span class="version">v3.0.0</span>
 		<Button.default action="accept" disabled={isFormInvalid}>
 			<Button.Label>Fechar</Button.Label>
 		</Button.default>

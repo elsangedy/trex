@@ -4,10 +4,7 @@
 	import * as Dialog from '@smui/dialog';
 
 	export let name: string;
-	export let sets: number | undefined = undefined;
-	export let reps: number | string | undefined = undefined;
-	export let time: number | string | undefined = undefined;
-	export let repsMax: number | undefined = undefined;
+	export let prescription: string | undefined = undefined;
 	export let weight: number | undefined = undefined;
 	export let weightPercent: number | undefined = undefined;
 	export let weightPercentMax: number | undefined = undefined;
@@ -27,20 +24,20 @@
 
 <List.Item on:click={handleOpen} class={kind}>
 	<List.Text>
-		<List.PrimaryText class={sets ? undefined : 'no-sets'}>{name}</List.PrimaryText>
-		{#if sets}
+		<List.PrimaryText class={prescription ? undefined : 'no-sets'}>{name}</List.PrimaryText>
+		{#if prescription}
 			<List.SecondaryText>
-				{sets} x {#if reps}{reps}{#if repsMax}~{repsMax}{/if}reps{:else}{time}{/if}
+				{prescription}
 			</List.SecondaryText>
 		{/if}
 	</List.Text>
 	{#if weightComputed}
 		<List.Meta>
 			<div>
-				{weightComputed}kg {#if weightPercentMax}~ {weightMaxComputed}{/if}kg
+				{weightComputed}kg{#if weightPercentMax} ~ {weightMaxComputed}kg{/if}
 			</div>
 			<div>
-				{#if weightPercent}{weightPercent}% {#if weightPercentMax}~ {weightPercentMax}{/if}%{/if}
+				{#if weightPercent}{weightPercent}%{#if weightPercentMax} ~ {weightPercentMax}%{/if}{/if}
 			</div>
 		</List.Meta>
 	{/if}

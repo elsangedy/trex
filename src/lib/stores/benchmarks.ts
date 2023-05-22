@@ -4,10 +4,10 @@ import { persisted } from './persisted';
 export const benchmarks = persisted(
 	'benchmarks',
 	{
-		clean: 0,
 		deadlift: 0,
 		backSquat: 0,
-		benchPress: 0
+		benchPress: 0,
+		shoulderPress: 0
 	},
 	{
 		storage: 'local'
