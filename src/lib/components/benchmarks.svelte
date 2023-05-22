@@ -17,7 +17,7 @@
 >
 	<Dialog.Title id="benchmarks-title">Atualizar RMs</Dialog.Title>
 	<Dialog.Content id="benchmarks-content">
-		<p>Informe seus RMs e seu grupo para calcular a planilha</p>
+		<p>Informe seus RMs para calcular a planilha</p>
 		<div class="input-container">
 			<Textfield
 				bind:value={$benchmarks.deadlift}
