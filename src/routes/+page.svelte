@@ -45,7 +45,7 @@
 					prescription="4 x 10reps"
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/back-squat.gif`}
-					weightPercent={60}
+					weightPercent={50}
 					weight={$benchmarks.backSquat}
 				/>
 				<Separator.default />
@@ -54,7 +54,7 @@
 					prescription="4 x 10reps"
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/bench-press.gif`}
-					weightPercent={60}
+					weightPercent={50}
 					weight={$benchmarks.benchPress}
 				/>
 				<Separator.default />
@@ -84,7 +84,7 @@
 					prescription="4 x 10reps"
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/deadlift.gif`}
-					weightPercent={60}
+					weightPercent={50}
 					weight={$benchmarks.deadlift}
 				/>
 				<Separator.default />
@@ -93,7 +93,7 @@
 					prescription="4 x 10reps"
 					kind="power"
 					media={`${IMAGE_URL_PREFIX}/shoulder-press.gif`}
-					weightPercent={60}
+					weightPercent={50}
 					weight={$benchmarks.shoulderPress}
 				/>
 				<Separator.default />
