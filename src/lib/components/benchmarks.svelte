@@ -72,7 +72,7 @@
 		</div>
 	</Dialog.Content>
 	<Dialog.Actions class="actions">
-		<span class="version">v3.0.0</span>
+		<span class="version">v4.0.0</span>
 		<Button.default action="accept" disabled={isFormInvalid}>
 			<Button.Label>Fechar</Button.Label>
 		</Button.default>

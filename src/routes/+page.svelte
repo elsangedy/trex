@@ -3,13 +3,11 @@
 	import * as Accordion from '@smui-extra/accordion';
 	import * as Separator from '@smui/list/src/Separator.svelte';
 
+	import { exercises } from '$lib/data';
 	import { benchmarks } from '$lib/stores/benchmarks';
 	import Exercice from '$lib/components/exercice.svelte';
-	import { exercises } from '$lib/data';
 
 	const dayOfWeek = new Date().getDay();
-
-	const IMAGE_URL_PREFIX = 'https://ik.imagekit.io/29ddu02vk/trex';
 </script>
 
 <Accordion.default>
