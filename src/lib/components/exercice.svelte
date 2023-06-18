@@ -9,7 +9,7 @@
 	export let weightPercent: number | undefined = undefined;
 	export let weightPercentMax: number | undefined = undefined;
 	export let media: string | undefined = undefined;
-	export let kind: 'warmup' | 'skill' | 'power' | undefined = undefined;
+	export let kind: 'warmup' | 'skill' | 'power' | 'lpo' | undefined = undefined;
 
 	$: weightComputed = weight ? (weight * (weightPercent || 100)) / 100 : false;
 	$: weightMaxComputed = weight ? (weight * (weightPercentMax || 100)) / 100 : false;
@@ -86,5 +86,8 @@
 	}
 	:global(.power) {
 		background-color: rgb(255 153 0 / 24%);
+	}
+	:global(.lpo) {
+		background-color: rgb(255 0 0 / 24%);
 	}
 </style>

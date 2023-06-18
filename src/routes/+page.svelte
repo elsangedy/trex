@@ -5,6 +5,7 @@
 
 	import { benchmarks } from '$lib/stores/benchmarks';
 	import Exercice from '$lib/components/exercice.svelte';
+	import { exercises } from '$lib/data';
 
 	const dayOfWeek = new Date().getDay();
 
@@ -13,98 +14,126 @@
 
 <Accordion.default>
 	<Accordion.Panel open={dayOfWeek === 1}>
-		<Accordion.Header>Segunda-feira</Accordion.Header>
+		<Accordion.Header>SEGUNDA</Accordion.Header>
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
-				<Exercice name="Warmup / Core" media={`${IMAGE_URL_PREFIX}/warmup.png`} kind="warmup" />
+				<Exercice {...exercises.warmupAndCore} />
 				<Separator.default />
-				<Exercice name="1 Arm Fly" prescription="3 x 10 + 10reps" />
+				<Exercice {...exercises.cleanComplex} kind="skill" />
 				<Separator.default />
-				<Exercice name="Copenhagen Iso Hold" prescription="3 x 30~45seg / lado" />
-				<Separator.default />
-				<Exercice name="Inverted Row Iso Hold" prescription="3 x 30~45seg / lado" />
-				<Separator.default />
-				<Exercice name="LPO Complex" kind="power" />
-				<Separator.default />
-				<Exercice name="Cool Down" />
-			</List.default>
-		</Accordion.Content>
-	</Accordion.Panel>
-	<Accordion.Panel open={dayOfWeek === 3}>
-		<Accordion.Header>Quarta-feira</Accordion.Header>
-		<Accordion.Content class="accordion-content">
-			<List.default twoLine>
-				<Exercice name="Warmup / Core" media={`${IMAGE_URL_PREFIX}/warmup.png`} kind="warmup" />
-				<Separator.default />
-				<Exercice name="Banded Rotation" prescription="3 x 10 + 10reps" />
-				<Separator.default />
-				<Exercice name="1 Leg Curl" prescription="3 x 10 + 10reps" />
+				<Exercice {...exercises.hangClean} kind="lpo" prescription="3 x 5" />
 				<Separator.default />
 				<Exercice
-					name="Back Squat"
-					prescription="4 x 10reps"
+					{...exercises.backSquat}
 					kind="power"
-					media={`${IMAGE_URL_PREFIX}/back-squat.gif`}
-					weightPercent={50}
+					prescription="3 x 8"
+					weightPercent={65}
 					weight={$benchmarks.backSquat}
 				/>
 				<Separator.default />
-				<Exercice
-					name="Bench Press"
-					prescription="4 x 10reps"
-					kind="power"
-					media={`${IMAGE_URL_PREFIX}/bench-press.gif`}
-					weightPercent={50}
-					weight={$benchmarks.benchPress}
-				/>
+				<Exercice {...exercises.pullUps} prescription="3 x MAX" />
 				<Separator.default />
-				<Exercice
-					name="Pull Ups"
-					prescription="4 x MAXreps"
-					kind="skill"
-					media={`${IMAGE_URL_PREFIX}/pull-ups.gif`}
-				/>
+				<Exercice {...exercises.oneLegRdl} prescription="3 x 8 + 8" />
 				<Separator.default />
-				<Exercice name="Cool Down" />
+				<Exercice {...exercises.shoulderComplex} prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.coolDown} />
 			</List.default>
 		</Accordion.Content>
 	</Accordion.Panel>
-	<Accordion.Panel open={dayOfWeek === 5}>
-		<Accordion.Header>Sexta-feira</Accordion.Header>
+	<Accordion.Panel open={dayOfWeek === 2}>
+		<Accordion.Header>TERÇA</Accordion.Header>
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
-				<Exercice name="Warmup / Core" media={`${IMAGE_URL_PREFIX}/warmup.png`} kind="warmup" />
+				<Exercice {...exercises.warmupAndCore} />
 				<Separator.default />
-				<Exercice name="Reverse Hyper" prescription="3 x 30~45seg / lado" />
-				<Separator.default />
-				<Exercice name="1 Leg Box Squat" prescription="3 x 10 + 10reps" />
+				<Exercice {...exercises.shoulderAndCore} kind="skill" />
 				<Separator.default />
 				<Exercice
-					name="Deadlift"
-					prescription="4 x 10reps"
+					{...exercises.deadlift}
 					kind="power"
-					media={`${IMAGE_URL_PREFIX}/deadlift.gif`}
-					weightPercent={50}
+					prescription="3 x 8"
+					weightPercent={65}
 					weight={$benchmarks.deadlift}
 				/>
 				<Separator.default />
 				<Exercice
-					name="Shoulder Press"
-					prescription="4 x 10reps"
+					{...exercises.pushPress}
 					kind="power"
-					media={`${IMAGE_URL_PREFIX}/shoulder-press.gif`}
-					weightPercent={50}
+					prescription="3 x 8"
+					weightPercent={65}
 					weight={$benchmarks.shoulderPress}
 				/>
 				<Separator.default />
+				<Exercice {...exercises.lowToHighWoodchop} kind="warmup" prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.bulgarianSquat} prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.oneArmBenchPress} prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.coolDown} />
+			</List.default>
+		</Accordion.Content>
+	</Accordion.Panel>
+	<Accordion.Panel open={dayOfWeek === 4}>
+		<Accordion.Header>QUINTA</Accordion.Header>
+		<Accordion.Content class="accordion-content">
+			<List.default twoLine>
+				<Exercice {...exercises.warmupAndCore} />
+				<Separator.default />
+				<Exercice {...exercises.hipsAndCore} kind="skill" />
+				<Separator.default />
+				<Exercice {...exercises.powerClean} kind="lpo" prescription="3 x 5" />
+				<Separator.default />
 				<Exercice
-					name="KB Swings"
-					prescription="4 x 10reps"
-					kind="skill"
-					media={`${IMAGE_URL_PREFIX}/kb-swings.gif`}
+					{...exercises.benchPress}
+					kind="power"
+					prescription="3 x 8"
+					weightPercent={65}
+					weight={$benchmarks.benchPress}
 				/>
 				<Separator.default />
-				<Exercice name="Cool Down" />
+				<Exercice {...exercises.splitSquat} prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.splitStanceOneArmPress} prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.oneLegHipThrust} prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.coolDown} />
+			</List.default>
+		</Accordion.Content>
+	</Accordion.Panel>
+	<Accordion.Panel open={dayOfWeek === 5}>
+		<Accordion.Header>SEXTA</Accordion.Header>
+		<Accordion.Content class="accordion-content">
+			<List.default twoLine>
+				<Exercice {...exercises.warmupAndCore} />
+				<Separator.default />
+				<Exercice {...exercises.shoulderAndCore} kind="skill" />
+				<Separator.default />
+				<Exercice
+					{...exercises.frontSquat}
+					kind="power"
+					prescription="3 x 8"
+					weightPercent={65}
+					weight={$benchmarks.backSquat}
+				/>
+				<Separator.default />
+				<Exercice
+					{...exercises.bentOverRow}
+					kind="power"
+					prescription="3 x 8"
+					weightPercent={65}
+					weight={$benchmarks.benchPress}
+				/>
+				<Separator.default />
+				<Exercice {...exercises.spidermanTwist} kind="warmup" prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.lateralLungeAndStepUp} prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.bisAndTris} prescription="3 x 8 + 8" />
+				<Separator.default />
+				<Exercice {...exercises.coolDown} />
 			</List.default>
 		</Accordion.Content>
 	</Accordion.Panel>
