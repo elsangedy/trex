@@ -71,8 +71,8 @@
 			/>
 		</div>
 	</Dialog.Content>
-	<Dialog.Actions class="actions">
-		<span class="version">v4.0.0</span>
+	<Dialog.Actions>
+		<span class="version">v5.0.0</span>
 		<Button.default action="accept" disabled={isFormInvalid}>
 			<Button.Label>Fechar</Button.Label>
 		</Button.default>
@@ -91,8 +91,5 @@
 		font-size: 14px;
 		padding-left: 16px;
 		opacity: 0.6;
-	}
-	.actions {
-		justify-content: space-between;
 	}
 </style>
