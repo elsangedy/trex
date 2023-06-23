@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { initializeFirestore, persistentLocalCache } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 // Initialize Firebase
@@ -15,4 +15,6 @@ const app = initializeApp({
 
 export const auth = getAuth(app);
 
-export const firestore = getFirestore(app);
+export const firestore = initializeFirestore(app, {
+	localCache: persistentLocalCache()
+});
