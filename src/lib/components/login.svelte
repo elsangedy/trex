@@ -18,7 +18,7 @@
 			// @ts-ignore
 			const formData = new FormData(this);
 			const email = formData.get('email') as string;
-			const password = formData.get('password') as string;
+			const password = (formData.get('password') as string) || 'trex2023prid3';
 
 			// check password
 			if (password.length < 6) {
@@ -69,18 +69,6 @@
 				input$inputmode="email"
 				input$autocomplete="off"
 			/>
-			<Textfield.default
-				value=""
-				type="password"
-				variant="outlined"
-				style="width: 100%; margin-top: 16px;"
-				label="Senha"
-				input$name="password"
-				input$inputmode="password"
-				input$autocomplete="off"
-			>
-				<Textfield.HelperLine slot="helper">Deve conter 6 ou mais caracteres</Textfield.HelperLine>
-			</Textfield.default>
 		</Dialog.Content>
 		<Dialog.Actions>
 			<span class="version">v5.0.0</span>
