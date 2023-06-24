@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Textfield from '@smui/textfield';
+	import * as Textfield from '@smui/textfield';
 	import * as Button from '@smui/button';
 	import * as Dialog from '@smui/dialog';
 
@@ -19,7 +19,7 @@
 	<Dialog.Content id="benchmarks-content">
 		<p>Informe seus RMs para calcular a planilha</p>
 		<div class="input-container">
-			<Textfield
+			<Textfield.default
 				bind:value={$benchmarks.deadlift}
 				type="number"
 				variant="outlined"
@@ -32,7 +32,7 @@
 			/>
 		</div>
 		<div class="input-container">
-			<Textfield
+			<Textfield.default
 				bind:value={$benchmarks.backSquat}
 				type="number"
 				variant="outlined"
@@ -45,7 +45,7 @@
 			/>
 		</div>
 		<div class="input-container">
-			<Textfield
+			<Textfield.default
 				bind:value={$benchmarks.benchPress}
 				type="number"
 				variant="outlined"
@@ -58,7 +58,7 @@
 			/>
 		</div>
 		<div class="input-container">
-			<Textfield
+			<Textfield.default
 				bind:value={$benchmarks.shoulderPress}
 				type="number"
 				variant="outlined"
@@ -91,5 +91,6 @@
 		font-size: 14px;
 		padding-left: 16px;
 		opacity: 0.6;
+		flex: 1;
 	}
 </style>
