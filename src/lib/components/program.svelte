@@ -1,7 +1,6 @@
 <script lang="ts">
 	import * as List from '@smui/list';
 	import * as Accordion from '@smui-extra/accordion';
-	import * as Separator from '@smui/list/src/Separator.svelte';
 
 	import { exercises } from '$lib/data';
 	import { benchmarks } from '$lib/stores/benchmarks';
@@ -16,11 +15,11 @@
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
 				<Exercice {...exercises.warmupAndCore} />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.cleanComplex} kind="skill" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.hangClean} kind="lpo" prescription="3 x 5" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice
 					{...exercises.backSquat}
 					kind="power"
@@ -28,11 +27,11 @@
 					weightPercent={65}
 					weight={$benchmarks.backSquat}
 				/>
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.pullUps} prescription="3 x MAX" />
 				<Exercice {...exercises.oneLegRdl} prescription="3 x 8 + 8" />
 				<Exercice {...exercises.shoulderComplex} prescription="3 x 8 + 8" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.coolDown} />
 			</List.default>
 		</Accordion.Content>
@@ -43,9 +42,9 @@
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
 				<Exercice {...exercises.warmupAndCore} />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.shoulderAndCore} kind="skill" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice
 					{...exercises.deadlift}
 					kind="power"
@@ -53,7 +52,7 @@
 					weightPercent={65}
 					weight={$benchmarks.deadlift}
 				/>
-				<Separator.default />
+				<List.Separator />
 				<Exercice
 					{...exercises.pushPress}
 					kind="power"
@@ -61,11 +60,11 @@
 					weightPercent={65}
 					weight={$benchmarks.shoulderPress}
 				/>
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.lowToHighWoodchop} kind="warmup" prescription="3 x 8 + 8" />
 				<Exercice {...exercises.bulgarianSquat} prescription="3 x 8 + 8" />
 				<Exercice {...exercises.oneArmBenchPress} prescription="3 x 8 + 8" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.coolDown} />
 			</List.default>
 		</Accordion.Content>
@@ -76,11 +75,11 @@
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
 				<Exercice {...exercises.warmupAndCore} />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.hipsAndCore} kind="skill" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.powerClean} kind="lpo" prescription="3 x 5" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice
 					{...exercises.benchPress}
 					kind="power"
@@ -88,11 +87,11 @@
 					weightPercent={65}
 					weight={$benchmarks.benchPress}
 				/>
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.splitSquat} prescription="3 x 8 + 8" />
 				<Exercice {...exercises.splitStanceOneArmPress} prescription="3 x 8 + 8" />
 				<Exercice {...exercises.oneLegHipThrust} prescription="3 x 8 + 8" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.coolDown} />
 			</List.default>
 		</Accordion.Content>
@@ -103,9 +102,9 @@
 		<Accordion.Content class="accordion-content">
 			<List.default twoLine>
 				<Exercice {...exercises.warmupAndCore} />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.shoulderAndCore} kind="skill" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice
 					{...exercises.frontSquat}
 					kind="power"
@@ -113,7 +112,7 @@
 					weightPercent={65}
 					weight={$benchmarks.backSquat}
 				/>
-				<Separator.default />
+				<List.Separator />
 				<Exercice
 					{...exercises.bentOverRow}
 					kind="power"
@@ -121,11 +120,11 @@
 					weightPercent={65}
 					weight={$benchmarks.benchPress}
 				/>
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.spidermanTwist} kind="warmup" prescription="3 x 8 + 8" />
 				<Exercice {...exercises.lateralLungeAndStepUp} prescription="3 x 8 + 8" />
 				<Exercice {...exercises.bisAndTris} prescription="3 x 8 + 8" />
-				<Separator.default />
+				<List.Separator />
 				<Exercice {...exercises.coolDown} />
 			</List.default>
 		</Accordion.Content>
