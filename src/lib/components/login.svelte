@@ -3,7 +3,8 @@
 	import {
 		createUserWithEmailAndPassword,
 		signInWithEmailAndPassword,
-		fetchSignInMethodsForEmail
+		fetchSignInMethodsForEmail,
+		updateProfile
 	} from 'firebase/auth';
 
 	import * as Button from '@smui/button';
@@ -40,7 +41,11 @@
 			if (hasAccount) {
 				await signInWithEmailAndPassword(auth, email, password);
 			} else {
-				await createUserWithEmailAndPassword(auth, email, password);
+				const { user } = await createUserWithEmailAndPassword(auth, email, password);
+				const { name } = athlete.data();
+				await updateProfile(user, {
+					displayName: name
+				});
 			}
 		} catch (e: any) {
 			alert(e.message);
@@ -72,7 +77,7 @@
 		</Dialog.Content>
 		<Dialog.Actions>
 			<span class="version">v5.0.0</span>
-			<Button.default type="submit" action="">
+			<Button.default type="submit" variant="raised" action="">
 				<Button.Label>Entrar</Button.Label>
 			</Button.default>
 		</Dialog.Actions>
