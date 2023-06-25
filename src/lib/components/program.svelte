@@ -24,7 +24,7 @@
 					{...exercises.backSquat}
 					kind="power"
 					prescription="3 x 8"
-					weightPercent={65}
+					weightPercent={70}
 					weight={$benchmarks.backSquat}
 				/>
 				<List.Separator />
@@ -49,7 +49,7 @@
 					{...exercises.deadlift}
 					kind="power"
 					prescription="3 x 8"
-					weightPercent={65}
+					weightPercent={70}
 					weight={$benchmarks.deadlift}
 				/>
 				<List.Separator />
@@ -57,7 +57,7 @@
 					{...exercises.pushPress}
 					kind="power"
 					prescription="3 x 8"
-					weightPercent={65}
+					weightPercent={70}
 					weight={$benchmarks.shoulderPress}
 				/>
 				<List.Separator />
@@ -84,7 +84,7 @@
 					{...exercises.benchPress}
 					kind="power"
 					prescription="3 x 8"
-					weightPercent={65}
+					weightPercent={70}
 					weight={$benchmarks.benchPress}
 				/>
 				<List.Separator />
@@ -109,7 +109,7 @@
 					{...exercises.frontSquat}
 					kind="power"
 					prescription="3 x 8"
-					weightPercent={65}
+					weightPercent={70}
 					weight={$benchmarks.backSquat}
 				/>
 				<List.Separator />
@@ -117,13 +117,13 @@
 					{...exercises.bentOverRow}
 					kind="power"
 					prescription="3 x 8"
-					weightPercent={65}
+					weightPercent={70}
 					weight={$benchmarks.benchPress}
 				/>
 				<List.Separator />
 				<Exercice {...exercises.spidermanTwist} kind="warmup" prescription="3 x 8 + 8" />
 				<Exercice {...exercises.lateralLungeAndStepUp} prescription="3 x 8 + 8" />
-				<Exercice {...exercises.bisAndTris} prescription="3 x 8 + 8" />
+				<Exercice {...exercises.bisAndTris} prescription="3 x 10 + 10" />
 				<List.Separator />
 				<Exercice {...exercises.coolDown} />
 			</List.default>
