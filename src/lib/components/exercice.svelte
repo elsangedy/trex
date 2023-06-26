@@ -33,10 +33,10 @@
 	</List.Text>
 	{#if weightComputed}
 		<List.Meta>
-			<div>
+			<div style="text-align: right">
 				{weightComputed}kg{#if weightPercentMax} ~ {weightMaxComputed}kg{/if}
 			</div>
-			<div>
+			<div style="text-align: right">
 				{#if weightPercent}{weightPercent}%{#if weightPercentMax} ~ {weightPercentMax}%{/if}{/if}
 			</div>
 		</List.Meta>
