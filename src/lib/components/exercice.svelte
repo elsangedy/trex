@@ -7,12 +7,11 @@
 	export let prescription: string | undefined = undefined;
 	export let weight: number | undefined = undefined;
 	export let weightPercent: number | undefined = undefined;
-	export let weightPercentMax: number | undefined = undefined;
 	export let media: string | undefined = undefined;
 	export let kind: 'warmup' | 'skill' | 'strength' | 'power' | undefined = undefined;
 
 	$: weightComputed = weight ? (weight * (weightPercent || 100)) / 100 : false;
-	$: weightMaxComputed = weight ? (weight * (weightPercentMax || 100)) / 100 : false;
+
 	let open = false;
 
 	const handleOpen = () => {
@@ -34,10 +33,10 @@
 	{#if weightComputed}
 		<List.Meta>
 			<div style="text-align: right">
-				{weightComputed}kg{#if weightPercentMax} ~ {weightMaxComputed}kg{/if}
+				{weightComputed}kg
 			</div>
 			<div style="text-align: right">
-				{#if weightPercent}{weightPercent}%{#if weightPercentMax} ~ {weightPercentMax}%{/if}{/if}
+				{#if weightPercent}{weightPercent}%{/if}
 			</div>
 		</List.Meta>
 	{/if}
@@ -55,7 +54,7 @@
 		</Dialog.Header>
 		<Dialog.Content id="media-modal-content" class="media-content">
 			{#if open}
-			<img src={media} class="media" alt={name} />
+				<img src={media} class="media" alt={name} />
 			{/if}
 		</Dialog.Content>
 		<Dialog.Actions>
