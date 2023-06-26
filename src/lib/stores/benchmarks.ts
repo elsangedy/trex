@@ -1,7 +1,14 @@
 import { get, writable } from 'svelte/store';
 import { persisted } from './persisted';
 
-export const benchmarks = persisted(
+export type Benchmarks = {
+	deadlift: number;
+	backSquat: number;
+	benchPress: number;
+	shoulderPress: number;
+};
+
+export const benchmarks = persisted<Benchmarks>(
 	'benchmarks',
 	{
 		deadlift: 0,

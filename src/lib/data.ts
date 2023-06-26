@@ -1,3 +1,5 @@
+import type { Benchmarks } from './stores/benchmarks';
+
 const IMAGE_URL_PREFIX = 'https://ik.imagekit.io/29ddu02vk/trex';
 
 export const exercises = {
@@ -102,3 +104,157 @@ export const exercises = {
 		// media: `${IMAGE_URL_PREFIX}/bis-and-tris.gif`
 	}
 };
+
+export const program: Array<{
+	title: string;
+	dayOfWeek: number;
+	exercises: Array<{
+		name: string;
+		media?: string;
+		kind?: 'warmup' | 'skill' | 'strength' | 'power';
+		prescription?: string;
+		weightPercent?: number;
+		benchmark?: keyof Benchmarks;
+	}>;
+}> = [
+	{
+		title: 'SEGUNDA',
+		dayOfWeek: 1,
+		exercises: [
+			{
+				...exercises.cleanComplex,
+				kind: 'skill'
+			},
+			{
+				...exercises.hangClean,
+				kind: 'power',
+				prescription: '3 x 5'
+			},
+			{
+				...exercises.backSquat,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'backSquat'
+			},
+			{
+				...exercises.pullUps,
+				prescription: '3 x MAX'
+			},
+			{
+				...exercises.oneLegRdl,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.shoulderComplex,
+				prescription: '3 x 8 + 8'
+			}
+		]
+	},
+	{
+		title: 'TERÇA',
+		dayOfWeek: 2,
+		exercises: [
+			{
+				...exercises.shoulderAndCore,
+				kind: 'skill'
+			},
+			{
+				...exercises.deadlift,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'deadlift'
+			},
+			{
+				...exercises.pushPress,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'shoulderPress'
+			},
+			{
+				...exercises.lowToHighWoodchop,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.bulgarianSquat,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.oneArmBenchPress,
+				prescription: '3 x 8 + 8'
+			}
+		]
+	},
+	{
+		title: 'QUINTA',
+		dayOfWeek: 4,
+		exercises: [
+			{
+				...exercises.hipsAndCore,
+				kind: 'skill'
+			},
+			{
+				...exercises.powerClean,
+				kind: 'power',
+				prescription: '3 x 5'
+			},
+			{
+				...exercises.benchPress,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'benchPress'
+			},
+			{
+				...exercises.splitSquat,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.splitStanceOneArmPress,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.oneLegHipThrust,
+				prescription: '3 x 8 + 8'
+			}
+		]
+	},
+	{
+		title: 'SEXTA',
+		dayOfWeek: 5,
+		exercises: [
+			{
+				...exercises.shoulderAndCore,
+				kind: 'skill'
+			},
+			{
+				...exercises.frontSquat,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'backSquat'
+			},
+			{
+				...exercises.bentOverRow,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'benchPress'
+			},
+			{
+				...exercises.spidermanTwist,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.lateralLungeAndStepUp,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.bisAndTris,
+				prescription: '3 x 10 + 10'
+			}
+		]
+	}
+];
