@@ -54,7 +54,9 @@
 			<Dialog.Title id="media-modal-title" style="margin-left: 8px;">{name}</Dialog.Title>
 		</Dialog.Header>
 		<Dialog.Content id="media-modal-content" class="media-content">
+			{#if open}
 			<img src={media} class="media" alt={name} />
+			{/if}
 		</Dialog.Content>
 		<Dialog.Actions>
 			<Button.default action="close">
