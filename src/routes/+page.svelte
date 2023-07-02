@@ -13,6 +13,8 @@
 	import { feedbacksOpen } from '$lib/stores/feedbacks';
 	import { benchmarksOpen } from '$lib/stores/benchmarks';
 
+	export const prerender = true;
+
 	let topAppBar: TopAppBar.default;
 </script>
 
