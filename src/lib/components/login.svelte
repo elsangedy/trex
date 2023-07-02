@@ -13,7 +13,11 @@
 
 	import { auth, firestore } from '$lib/firebase';
 
+	let loading = false;
+
 	async function handleSubmit() {
+		loading = true;
+
 		try {
 			// get form data
 			// @ts-ignore
@@ -49,6 +53,8 @@
 			}
 		} catch (e: any) {
 			alert(e.message);
+		} finally {
+			loading = false;
 		}
 	}
 </script>
@@ -77,7 +83,7 @@
 		</Dialog.Content>
 		<Dialog.Actions>
 			<span class="version">v5.0.0</span>
-			<Button.default type="submit" variant="raised" action="">
+			<Button.default type="submit" variant="raised" action="" disabled={loading}>
 				<Button.Label>Entrar</Button.Label>
 			</Button.default>
 		</Dialog.Actions>

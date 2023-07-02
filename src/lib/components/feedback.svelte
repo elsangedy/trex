@@ -115,13 +115,17 @@
 		unsubscribe();
 	});
 
+	let loading = false;
+
 	const handleSubmit = async () => {
+		loading = true;
 		try {
 			await setDoc(feedbackRef, { name: auth.currentUser?.displayName, recovery, effort });
 			alert('Obrigado pelo feedback!');
 		} catch (error) {
 			alert('Erro ao enviar feedback');
 		} finally {
+			loading = false;
 			$feedbacksOpen = false;
 		}
 	};
@@ -151,10 +155,10 @@
 		{/each}
 	</Dialog.Content>
 	<Dialog.Actions>
-		<Button.default action="close">
+		<Button.default action="close" disabled={loading}>
 			<Button.Label>Fechar</Button.Label>
 		</Button.default>
-		<Button.default action="" variant="raised" on:click={handleSubmit}>
+		<Button.default action="" variant="raised" disabled={loading} on:click={handleSubmit}>
 			<Button.Label>Enviar</Button.Label>
 		</Button.default>
 	</Dialog.Actions>
