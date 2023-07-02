@@ -1,5 +1,3 @@
-import type { Benchmarks } from './stores/benchmarks';
-
 const IMAGE_URL_PREFIX = 'https://ik.imagekit.io/29ddu02vk/trex';
 
 export const exercises = {
@@ -114,7 +112,7 @@ export const program: Array<{
 		kind?: 'warmup' | 'skill' | 'strength' | 'power';
 		prescription?: string;
 		weightPercent?: number;
-		benchmark?: keyof Benchmarks;
+		benchmark?: string;
 	}>;
 }> = [
 	{
@@ -135,7 +133,7 @@ export const program: Array<{
 				kind: 'strength',
 				prescription: '3 x 8',
 				weightPercent: 70,
-				benchmark: 'backSquat'
+				benchmark: 'frontSquat1Rm'
 			},
 			{
 				...exercises.pullUps,
@@ -164,14 +162,14 @@ export const program: Array<{
 				kind: 'strength',
 				prescription: '3 x 8',
 				weightPercent: 70,
-				benchmark: 'deadlift'
+				benchmark: 'deadlift1Rm'
 			},
 			{
 				...exercises.pushPress,
 				kind: 'strength',
 				prescription: '3 x 8',
 				weightPercent: 70,
-				benchmark: 'shoulderPress'
+				benchmark: 'shoulderPress1Rm'
 			},
 			{
 				...exercises.lowToHighWoodchop,
@@ -205,7 +203,7 @@ export const program: Array<{
 				kind: 'strength',
 				prescription: '3 x 8',
 				weightPercent: 70,
-				benchmark: 'benchPress'
+				benchmark: 'benchPress1Rm'
 			},
 			{
 				...exercises.splitSquat,
@@ -234,14 +232,14 @@ export const program: Array<{
 				kind: 'strength',
 				prescription: '3 x 8',
 				weightPercent: 70,
-				benchmark: 'backSquat'
+				benchmark: 'frontSquat1Rm'
 			},
 			{
 				...exercises.bentOverRow,
 				kind: 'strength',
 				prescription: '3 x 8',
 				weightPercent: 70,
-				benchmark: 'benchPress'
+				benchmark: 'benchPress1Rm'
 			},
 			{
 				...exercises.spidermanTwist,

@@ -3,8 +3,10 @@
 	import * as Accordion from '@smui-extra/accordion';
 
 	import { exercises, program } from '$lib/data';
-	import { benchmarks } from '$lib/stores/benchmarks';
-	import Exercice from '$lib/components/exercice.svelte';
+
+	import Exercice from './exercice.svelte';
+
+	export let benchmarks: Record<string, number> = {};
 
 	const dayOfWeek = new Date().getDay();
 </script>
@@ -19,8 +21,12 @@
 					<List.Separator />
 					{#each session.exercises as exercise}
 						<Exercice
-							{...exercise}
-							weight={exercise.benchmark ? $benchmarks[exercise.benchmark] : undefined}
+							name={exercise.name}
+							media={exercise.media}
+							kind={exercise.kind}
+							prescription={exercise.prescription}
+							weight={exercise.benchmark ? benchmarks[exercise.benchmark] : undefined}
+							weightPercent={exercise.weightPercent}
 						/>
 						<List.Separator />
 					{/each}
