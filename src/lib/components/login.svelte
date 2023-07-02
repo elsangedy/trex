@@ -55,8 +55,8 @@
 
 <Dialog.default
 	open
-	scrimClickAction=""
 	escapeKeyAction=""
+	scrimClickAction=""
 	aria-labelledby="signin-title"
 	aria-describedby="signin-content"
 >
