@@ -1,33 +1,123 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
+	import { doc, setDoc } from 'firebase/firestore';
+
 	import * as Button from '@smui/button';
 	import * as Dialog from '@smui/dialog';
 	import * as Radio from '@smui/radio';
 	import * as FormField from '@smui/form-field';
 
+	import { auth, docStore, firestore } from '$lib/firebase';
 	import { feedbacksOpen } from '$lib/stores/feedbacks';
-	import { doc, setDoc } from 'firebase/firestore';
-	import { auth, firestore } from '$lib/firebase';
-	import { docStore, userStore } from 'sveltefire';
 
-	const user = userStore(auth);
+	const FEEDBACK_RECOVERY_CONFIG = [
+		{
+			value: '1',
+			label: 'Nenhuma Recuperação'
+		},
+		{
+			value: '2',
+			label: 'Muito Pouco Recuperado'
+		},
+		{
+			value: '3',
+			label: 'Pouco Recuperado'
+		},
+		{
+			value: '4',
+			label: 'Recuperação Moderada'
+		},
+		{
+			value: '5',
+			label: 'Boa Recuperação'
+		},
+		{
+			value: '6',
+			label: 'Recuperação Muito Boa'
+		},
+		{
+			value: '7',
+			label: 'Recuperação Muito Boa'
+		},
+		{
+			value: '8',
+			label: 'Recuperação Muito Boa'
+		},
+		{
+			value: '9',
+			label: 'Recuperação Muito Boa'
+		},
+		{
+			value: '10',
+			label: 'Recuperado'
+		}
+	];
 
-	const ref = doc(
+	const FEEDBACK_EFFORT_CONFIG = [
+		{
+			value: '1',
+			label: 'Muito Leve'
+		},
+		{
+			value: '2',
+			label: 'Leve'
+		},
+		{
+			value: '3',
+			label: 'Leve'
+		},
+		{
+			value: '4',
+			label: 'Moderado'
+		},
+		{
+			value: '5',
+			label: 'Moderado'
+		},
+		{
+			value: '6',
+			label: 'Moderado'
+		},
+		{
+			value: '7',
+			label: 'Intenso'
+		},
+		{
+			value: '8',
+			label: 'Intenso'
+		},
+		{
+			value: '9',
+			label: 'Muito Intenso'
+		},
+		{
+			value: '10',
+			label: 'Máximo'
+		}
+	];
+
+	const feedbackRef = doc(
 		firestore,
 		'feedbacks',
 		new Date().toISOString().slice(0, 10),
 		'scores',
-		$user?.email!
+		auth.currentUser?.email!
 	);
 
-	let score = '';
-	const currentScore = docStore<{ score: string }>(firestore, ref);
-	currentScore.subscribe((value) => {
-		score = value?.score || '';
+	let recovery = '';
+	let effort = '';
+	const store = docStore(feedbackRef, false, { recovery: '', effort: '' });
+	const unsubscribe = store.subscribe((value) => {
+		recovery = value?.recovery || '';
+		effort = value?.effort || '';
+	});
+	onDestroy(() => {
+		unsubscribe();
 	});
 
 	const handleSubmit = async () => {
 		try {
-			await setDoc(ref, { score, name: $user?.displayName });
+			await setDoc(feedbackRef, { name: auth.currentUser?.displayName, recovery, effort });
 			alert('Obrigado pelo feedback!');
 		} catch (error) {
 			alert('Erro ao enviar feedback');
@@ -44,11 +134,19 @@
 >
 	<Dialog.Title id="feedback-title">Feedback</Dialog.Title>
 	<Dialog.Content id="feedback-content">
-		<p>De uma nota de como esta se sentindo após o treino:</p>
-		{#each ['1', '2', '3', '4', '5'] as option}
+		<p>COMO ESTÁ SUA RECUPERAÇÃO?</p>
+		{#each FEEDBACK_RECOVERY_CONFIG as option}
 			<FormField.default style="display: flex">
-				<Radio.default bind:group={score} value={option} />
-				<span slot="label">{option}</span>
+				<Radio.default bind:group={recovery} value={option.value} />
+				<span slot="label">{option.value.padStart(2, '0')} - {option.label}</span>
+			</FormField.default>
+		{/each}
+		<hr />
+		<p>COMO FOI O TREINO HOJE?</p>
+		{#each FEEDBACK_EFFORT_CONFIG as option}
+			<FormField.default style="display: flex">
+				<Radio.default bind:group={effort} value={option.value} />
+				<span slot="label">{option.value.padStart(2, '0')} - {option.label}</span>
 			</FormField.default>
 		{/each}
 	</Dialog.Content>
