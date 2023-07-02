@@ -103,7 +103,7 @@ export const exercises = {
 	}
 };
 
-export const program: Array<{
+type Program = Array<{
 	title: string;
 	dayOfWeek: number;
 	exercises: Array<{
@@ -114,7 +114,9 @@ export const program: Array<{
 		weightPercent?: number;
 		benchmark?: string;
 	}>;
-}> = [
+}>;
+
+export const fullProgram: Program = [
 	{
 		title: 'SEGUNDA',
 		dayOfWeek: 1,
@@ -252,6 +254,113 @@ export const program: Array<{
 			{
 				...exercises.bisAndTris,
 				prescription: '3 x 10 + 10'
+			}
+		]
+	}
+];
+
+export const shortProgram: Program = [
+	{
+		title: 'SEGUNDA',
+		dayOfWeek: 1,
+		exercises: [
+			{
+				...exercises.cleanComplex,
+				kind: 'skill'
+			},
+			{
+				...exercises.hangClean,
+				kind: 'power',
+				prescription: '3 x 5'
+			},
+			{
+				...exercises.backSquat,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'frontSquat1Rm'
+			},
+			{
+				...exercises.pullUps,
+				prescription: '3 x MAX'
+			},
+			{
+				...exercises.oneLegRdl,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.shoulderComplex,
+				prescription: '3 x 8 + 8'
+			}
+		]
+	},
+	{
+		title: 'QUARTA',
+		dayOfWeek: 3,
+		exercises: [
+			{
+				...exercises.shoulderAndCore,
+				kind: 'skill'
+			},
+			{
+				...exercises.deadlift,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'deadlift1Rm'
+			},
+			{
+				...exercises.pushPress,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'shoulderPress1Rm'
+			},
+			{
+				...exercises.lowToHighWoodchop,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.bulgarianSquat,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.oneArmBenchPress,
+				prescription: '3 x 8 + 8'
+			}
+		]
+	},
+	{
+		title: 'SEXTA',
+		dayOfWeek: 5,
+		exercises: [
+			{
+				...exercises.hipsAndCore,
+				kind: 'skill'
+			},
+			{
+				...exercises.powerClean,
+				kind: 'power',
+				prescription: '3 x 5'
+			},
+			{
+				...exercises.benchPress,
+				kind: 'strength',
+				prescription: '3 x 8',
+				weightPercent: 70,
+				benchmark: 'benchPress1Rm'
+			},
+			{
+				...exercises.splitSquat,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.splitStanceOneArmPress,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.oneLegHipThrust,
+				prescription: '3 x 8 + 8'
 			}
 		]
 	}

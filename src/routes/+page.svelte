@@ -37,7 +37,7 @@
 <TopAppBar.AutoAdjust {topAppBar}>
 	<User let:user>
 		<Doc ref={`athletes/${user.email}`} let:data={athlete} watch>
-			<Program benchmarks={athlete.benchmarks} />
+			<Program program={athlete.program} benchmarks={athlete.benchmarks} />
 
 			<Feedback />
 

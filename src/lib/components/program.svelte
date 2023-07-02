@@ -2,17 +2,19 @@
 	import * as List from '@smui/list';
 	import * as Accordion from '@smui-extra/accordion';
 
-	import { exercises, program } from '$lib/data';
+	import { exercises, fullProgram, shortProgram } from '$lib/data';
 
 	import Exercice from './exercice.svelte';
 
 	export let benchmarks: Record<string, number> = {};
+	export let program: 'full' | 'short' | undefined = 'full';
+	const sessions = program === 'full' ? fullProgram : shortProgram;
 
 	const dayOfWeek = new Date().getDay();
 </script>
 
 <Accordion.default>
-	{#each program as session}
+	{#each sessions as session}
 		<Accordion.Panel open={dayOfWeek === session.dayOfWeek}>
 			<Accordion.Header>{session.title}</Accordion.Header>
 			<Accordion.Content class="accordion-content">
