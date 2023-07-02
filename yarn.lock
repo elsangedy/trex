@@ -4463,11 +4463,6 @@ svelte@^3.54.0:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.55.1.tgz#6f93b153e5248039906ce5fe196efdb9e05dfce8"
   integrity sha512-S+87/P0Ve67HxKkEV23iCdAh/SX1xiSfjF1HOglno/YTbSTW7RniICMCofWGdJJbdjw3S+0PfFb1JtGfTXE0oQ==
 
-sveltefire@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/sveltefire/-/sveltefire-0.2.3.tgz#aa5a6b484fad3bc5b45f0a510bbdcc95631af394"
-  integrity sha512-NbAHAoh2jpGuAd9JwmreRPDD4YmGMJUflsbh50sJwp6CSbfezcR7Kh0c8H7X1v62f8FUroAlmqzjeP1Gah+m/A==
-
 temp-dir@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/temp-dir/-/temp-dir-2.0.0.tgz#bde92b05bdfeb1516e804c9c00ad45177f31321e"
