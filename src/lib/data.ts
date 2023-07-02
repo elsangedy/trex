@@ -128,13 +128,13 @@ export const fullProgram: Program = [
 			{
 				...exercises.hangClean,
 				kind: 'power',
-				prescription: '3 x 5'
+				prescription: '5 x 3'
 			},
 			{
 				...exercises.backSquat,
 				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
+				prescription: '3 x 6',
+				weightPercent: 75,
 				benchmark: 'frontSquat1Rm'
 			},
 			{
@@ -162,15 +162,15 @@ export const fullProgram: Program = [
 			{
 				...exercises.deadlift,
 				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
+				prescription: '3 x 6',
+				weightPercent: 75,
 				benchmark: 'deadlift1Rm'
 			},
 			{
 				...exercises.pushPress,
 				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
+				prescription: '3 x 6',
+				weightPercent: 75,
 				benchmark: 'shoulderPress1Rm'
 			},
 			{
@@ -198,13 +198,13 @@ export const fullProgram: Program = [
 			{
 				...exercises.powerClean,
 				kind: 'power',
-				prescription: '3 x 5'
+				prescription: '5 x 3'
 			},
 			{
 				...exercises.benchPress,
 				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
+				prescription: '3 x 6',
+				weightPercent: 75,
 				benchmark: 'benchPress1Rm'
 			},
 			{
@@ -220,43 +220,43 @@ export const fullProgram: Program = [
 				prescription: '3 x 8 + 8'
 			}
 		]
-	},
-	{
-		title: 'SEXTA',
-		dayOfWeek: 5,
-		exercises: [
-			{
-				...exercises.shoulderAndCore,
-				kind: 'skill'
-			},
-			{
-				...exercises.frontSquat,
-				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
-				benchmark: 'frontSquat1Rm'
-			},
-			{
-				...exercises.bentOverRow,
-				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
-				benchmark: 'benchPress1Rm'
-			},
-			{
-				...exercises.spidermanTwist,
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.lateralLungeAndStepUp,
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.bisAndTris,
-				prescription: '3 x 10 + 10'
-			}
-		]
 	}
+	// {
+	// 	title: 'SEXTA',
+	// 	dayOfWeek: 5,
+	// 	exercises: [
+	// 		{
+	// 			...exercises.shoulderAndCore,
+	// 			kind: 'skill'
+	// 		},
+	// 		{
+	// 			...exercises.frontSquat,
+	// 			kind: 'strength',
+	// 			prescription: '3 x 6',
+	// 			weightPercent: 75,
+	// 			benchmark: 'frontSquat1Rm'
+	// 		},
+	// 		{
+	// 			...exercises.bentOverRow,
+	// 			kind: 'strength',
+	// 			prescription: '3 x 6',
+	// 			weightPercent: 75,
+	// 			benchmark: 'benchPress1Rm'
+	// 		},
+	// 		{
+	// 			...exercises.spidermanTwist,
+	// 			prescription: '3 x 8 + 8'
+	// 		},
+	// 		{
+	// 			...exercises.lateralLungeAndStepUp,
+	// 			prescription: '3 x 8 + 8'
+	// 		},
+	// 		{
+	// 			...exercises.bisAndTris,
+	// 			prescription: '3 x 10 + 10'
+	// 		}
+	// 	]
+	// }
 ];
 
 export const shortProgram: Program = [
@@ -271,13 +271,13 @@ export const shortProgram: Program = [
 			{
 				...exercises.hangClean,
 				kind: 'power',
-				prescription: '3 x 5'
+				prescription: '5 x 3'
 			},
 			{
 				...exercises.backSquat,
 				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
+				prescription: '3 x 6',
+				weightPercent: 75,
 				benchmark: 'frontSquat1Rm'
 			},
 			{
@@ -305,15 +305,15 @@ export const shortProgram: Program = [
 			{
 				...exercises.deadlift,
 				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
+				prescription: '3 x 6',
+				weightPercent: 75,
 				benchmark: 'deadlift1Rm'
 			},
 			{
 				...exercises.pushPress,
 				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
+				prescription: '3 x 6',
+				weightPercent: 75,
 				benchmark: 'shoulderPress1Rm'
 			},
 			{
@@ -341,13 +341,13 @@ export const shortProgram: Program = [
 			{
 				...exercises.powerClean,
 				kind: 'power',
-				prescription: '3 x 5'
+				prescription: '5 x 3'
 			},
 			{
 				...exercises.benchPress,
 				kind: 'strength',
-				prescription: '3 x 8',
-				weightPercent: 70,
+				prescription: '3 x 6',
+				weightPercent: 75,
 				benchmark: 'benchPress1Rm'
 			},
 			{
