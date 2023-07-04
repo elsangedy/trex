@@ -118,6 +118,14 @@
 	let loading = false;
 
 	const handleSubmit = async () => {
+		if (!recovery) {
+			alert('Informe como está sua reciperação');
+			return;
+		}
+		if (!effort) {
+			alert('Informe como foi seu treino');
+			return;
+		}
 		loading = true;
 		try {
 			await setDoc(feedbackRef, { name: auth.currentUser?.displayName, recovery, effort });
