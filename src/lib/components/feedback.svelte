@@ -96,13 +96,15 @@
 		}
 	];
 
-	const feedbackRef = doc(
-		firestore,
-		'feedbacks',
-		new Date().toISOString().slice(0, 10),
-		'scores',
-		auth.currentUser?.email!
-	);
+	const date = new Date();
+	const dateId =
+		date.getFullYear() +
+		'-' +
+		(date.getMonth() + 1).toString().padStart(2, '0') +
+		'-' +
+		date.getDate().toString().padStart(2, '0');
+
+	const feedbackRef = doc(firestore, 'feedbacks', dateId, 'scores', auth.currentUser?.email!);
 
 	let recovery = '';
 	let effort = '';
