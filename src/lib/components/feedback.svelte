@@ -103,15 +103,17 @@
 		(date.getMonth() + 1).toString().padStart(2, '0') +
 		'-' +
 		date.getDate().toString().padStart(2, '0');
+	const userId = auth.currentUser?.email!;
 
-	const feedbackRef = doc(firestore, 'feedbacks', dateId, 'scores', auth.currentUser?.email!);
+	const feedbackRef = doc(firestore, 'feedbacks', dateId);
 
 	let recovery = '';
 	let effort = '';
-	const store = docStore(feedbackRef, false, { recovery: '', effort: '' });
+	const store = docStore(feedbackRef, false, {} as Record<string, any>);
 	const unsubscribe = store.subscribe((value) => {
-		recovery = value?.recovery || '';
-		effort = value?.effort || '';
+		const data = value?.[userId];
+		recovery = data?.recovery || '';
+		effort = data?.effort || '';
 	});
 	onDestroy(() => {
 		unsubscribe();
@@ -130,7 +132,11 @@
 		}
 		loading = true;
 		try {
-			await setDoc(feedbackRef, { name: auth.currentUser?.displayName, recovery, effort });
+			await setDoc(
+				feedbackRef,
+				{ [userId]: { name: auth.currentUser?.displayName, recovery, effort } },
+				{ merge: true }
+			);
 			alert('Obrigado pelo feedback!');
 		} catch (error) {
 			alert('Erro ao enviar feedback');
