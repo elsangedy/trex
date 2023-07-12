@@ -2,6 +2,7 @@
 	import * as TopAppBar from '@smui/top-app-bar';
 	import * as IconButton from '@smui/icon-button';
 
+	import Log from '$lib/components/log.svelte';
 	import Login from '$lib/components/login.svelte';
 	import Program from '$lib/components/program.svelte';
 	import Feedback from '$lib/components/feedback.svelte';
@@ -38,7 +39,9 @@
 
 <TopAppBar.AutoAdjust {topAppBar}>
 	<User let:user>
-		<Doc ref={`athletes/${user.email}`} let:data={athlete} watch>
+		<Doc ref={`athletes/${user.email}`} let:data={athlete} let:ref={athleteRef} watch>
+			<Log ref={athleteRef} />
+
 			<Program program={athlete.program} benchmarks={athlete.benchmarks} />
 
 			<Feedback />

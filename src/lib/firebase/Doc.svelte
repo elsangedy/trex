@@ -4,7 +4,7 @@
 	import { docStore } from './store';
 
 	interface $$Slots {
-		default: { data: any; ref: DocumentReference | null };
+		default: { data: any; ref: DocumentReference };
 		loading: {};
 	}
 
@@ -15,7 +15,7 @@
 	let store = docStore(ref, watch, initialData);
 </script>
 
-{#if !!$store}
+{#if !!$store && !!store.ref}
 	<slot data={$store} ref={store.ref} />
 {:else}
 	<slot name="loading" />
