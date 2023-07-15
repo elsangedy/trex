@@ -70,32 +70,32 @@ export const exercises = {
 		media: `${IMAGE_URL_PREFIX}/bench-press.gif`
 	},
 	splitSquat: {
-		name: 'SPLIT SQUAT'
-		// media: `${IMAGE_URL_PREFIX}/split-squat.gif`
+		name: 'SPLIT SQUAT',
+		media: `${IMAGE_URL_PREFIX}/split-squat.gif`
 	},
 	splitStanceOneArmPress: {
-		name: 'SPLIT STANCE 1 ARM PRESS'
-		// media: `${IMAGE_URL_PREFIX}/split-stance-one-arm-press.gif`
+		name: 'SPLIT STANCE 1 ARM PRESS',
+		media: `${IMAGE_URL_PREFIX}/split-stance-1-arm-press.gif`
 	},
 	oneLegHipThrust: {
-		name: '1 LEG HIP THRUST'
-		// media: `${IMAGE_URL_PREFIX}/1-leg-hip-thrust.gif`
+		name: '1 LEG HIP THRUST',
+		media: `${IMAGE_URL_PREFIX}/1-leg-hip-thrust.gif`
 	},
 	frontSquat: {
 		name: 'FRONT SQUAT',
 		media: `${IMAGE_URL_PREFIX}/front-squat.gif`
 	},
 	bentOverRow: {
-		name: 'BENT OVER ROW'
-		// media: `${IMAGE_URL_PREFIX}/bent-over-row.gif`
+		name: 'BENT OVER ROW',
+		media: `${IMAGE_URL_PREFIX}/bent-over-row.gif`
 	},
 	spidermanTwist: {
-		name: 'SPIDERMAN TWIST'
-		// media: `${IMAGE_URL_PREFIX}/spiderman-twist.gif`
+		name: 'SPIDERMAN TWIST',
+		media: `${IMAGE_URL_PREFIX}/spiderman-twist.gif`
 	},
 	lateralLungeAndStepUp: {
-		name: 'LATERAL LUNGE / STEP UP'
-		// media: `${IMAGE_URL_PREFIX}/lateral-lunge-and-step-up.gif`
+		name: 'LATERAL LUNGE / STEP UP',
+		media: `${IMAGE_URL_PREFIX}/lateral-lunge-and-step-up.gif`
 	},
 	bisAndTris: {
 		name: 'BIS / TRIS'
