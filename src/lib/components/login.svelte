@@ -22,8 +22,13 @@
 			// get form data
 			// @ts-ignore
 			const formData = new FormData(this);
-			const email = formData.get('email') as string;
+			const email = formData.get('email')?.toString().trim().toLowerCase() as string;
 			const password = (formData.get('password') as string) || 'trex2023prid3';
+
+			// check email
+			if (!email) {
+				throw new Error('E-maill não informado');
+			}
 
 			// check password
 			if (password.length < 6) {
