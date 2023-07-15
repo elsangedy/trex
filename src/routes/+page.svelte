@@ -42,7 +42,7 @@
 		<Doc ref={`athletes/${user.email}`} let:data={athlete} let:ref={athleteRef} watch>
 			<Log ref={athleteRef} />
 
-			<Program program={athlete.program} benchmarks={athlete.benchmarks} />
+			<Program program={athlete.program} benchmarks={athlete.benchmarks || {}} />
 
 			<Feedback />
 
