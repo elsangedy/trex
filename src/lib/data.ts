@@ -118,8 +118,8 @@ type Program = Array<{
 
 export const fullProgram: Program = [
 	{
-		title: 'SEGUNDA',
-		dayOfWeek: 1,
+		title: 'TERÇA',
+		dayOfWeek: 2,
 		exercises: [
 			{
 				...exercises.cleanComplex,
@@ -128,13 +128,13 @@ export const fullProgram: Program = [
 			{
 				...exercises.hangClean,
 				kind: 'power',
-				prescription: '5 x 3'
+				prescription: '3 x 2'
 			},
 			{
 				...exercises.backSquat,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'frontSquat1Rm'
 			},
 			{
@@ -143,17 +143,17 @@ export const fullProgram: Program = [
 			},
 			{
 				...exercises.oneLegRdl,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.shoulderComplex,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			}
 		]
 	},
 	{
-		title: 'TERÇA',
-		dayOfWeek: 2,
+		title: 'QUARTA',
+		dayOfWeek: 3,
 		exercises: [
 			{
 				...exercises.shoulderAndCore,
@@ -162,28 +162,28 @@ export const fullProgram: Program = [
 			{
 				...exercises.deadlift,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'deadlift1Rm'
 			},
 			{
 				...exercises.pushPress,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'shoulderPress1Rm'
 			},
 			{
 				...exercises.lowToHighWoodchop,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.bulgarianSquat,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.oneArmBenchPress,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			}
 		]
 	},
@@ -198,26 +198,26 @@ export const fullProgram: Program = [
 			{
 				...exercises.powerClean,
 				kind: 'power',
-				prescription: '5 x 3'
+				prescription: '3 x 2'
 			},
 			{
 				...exercises.benchPress,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'benchPress1Rm'
 			},
 			{
 				...exercises.splitSquat,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.splitStanceOneArmPress,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.oneLegHipThrust,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			}
 		]
 	},
@@ -232,24 +232,24 @@ export const fullProgram: Program = [
 			{
 				...exercises.frontSquat,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'frontSquat1Rm'
 			},
 			{
 				...exercises.bentOverRow,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'benchPress1Rm'
 			},
 			{
 				...exercises.spidermanTwist,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.lateralLungeAndStepUp,
-				prescription: '3 x 8 + 8'
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.bisAndTris,
@@ -276,8 +276,8 @@ export const shortProgram: Program = [
 			{
 				...exercises.backSquat,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'frontSquat1Rm'
 			},
 			{
@@ -305,15 +305,15 @@ export const shortProgram: Program = [
 			{
 				...exercises.deadlift,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'deadlift1Rm'
 			},
 			{
 				...exercises.pushPress,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'shoulderPress1Rm'
 			},
 			{
@@ -346,8 +346,8 @@ export const shortProgram: Program = [
 			{
 				...exercises.benchPress,
 				kind: 'strength',
-				prescription: '3 x 5',
-				weightPercent: 85,
+				prescription: '2 x 3',
+				weightPercent: 80,
 				benchmark: 'benchPress1Rm'
 			},
 			{
