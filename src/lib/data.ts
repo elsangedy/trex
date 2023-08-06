@@ -100,6 +100,67 @@ export const exercises = {
 	bisAndTris: {
 		name: 'BIS / TRIS'
 		// media: `${IMAGE_URL_PREFIX}/bis-and-tris.gif`
+	},
+
+	cluster: {
+		name: 'CLUSTER',
+		media: `${IMAGE_URL_PREFIX}/cluster.gif`
+	},
+	backSquatAndBoxJump: {
+		name: 'BACK SQUAT + BOX JUMP',
+		media: `${IMAGE_URL_PREFIX}/back-squat-and-box-jump.gif`
+	},
+	pullUpAndBallSlam: {
+		name: 'PULL UP + BALL SLAM',
+		media: `${IMAGE_URL_PREFIX}/pull-up-and-ball-slam.gif`
+	},
+	kneelingOneArmDbPress: {
+		name: 'KNELLING 1 ARM DB PRESS',
+		media: `${IMAGE_URL_PREFIX}/kneeling-1-arm-db-press.gif`
+	},
+	frontMedballThrow: {
+		name: 'FRONT MEDBALL THROW',
+		media: `${IMAGE_URL_PREFIX}/front-medball-throw.gif`
+	},
+	deadliftAndBoardJump: {
+		name: 'DEADLIFT + BOARD JUMP',
+		media: `${IMAGE_URL_PREFIX}/deadlift-and-board-jump.gif`
+	},
+	benchPressAndPlyoPushup: {
+		name: 'BENCH PRESS + PLYO PUSHUP',
+		media: `${IMAGE_URL_PREFIX}/bench-press-and-plyo-pushup.gif`
+	},
+	oneArmThruster: {
+		name: '1 ARM THRUSTER',
+		media: `${IMAGE_URL_PREFIX}/1-arm-thruster.gif`
+	},
+	lateralMedballThrow: {
+		name: 'LAT MEDBALL THROW',
+		media: `${IMAGE_URL_PREFIX}/lateral-medball-throw.gif`
+	},
+	spidermanJump: {
+		name: 'SPIDERMAN JUMP',
+		media: `${IMAGE_URL_PREFIX}/spiderman-jump.gif`
+	},
+	hangCleanAndJerk: {
+		name: 'HAND CLEAN + JERK',
+		media: `${IMAGE_URL_PREFIX}/hang-clean-and-jerk.gif`
+	},
+	boxSquat: {
+		name: 'BOX SQUAT',
+		media: `${IMAGE_URL_PREFIX}/box-squat.gif`
+	},
+	kbSwing: {
+		name: 'KB SWING',
+		media: `${IMAGE_URL_PREFIX}/kb-swing.gif`
+	},
+	twoPtOneArmDbRow: {
+		name: '2 PT 1 ARM DB ROW',
+		media: `${IMAGE_URL_PREFIX}/2-pt-1-arm-db-row.gif`
+	},
+	lowToHighPulley: {
+		name: 'LOW TO HIGH PULLEY',
+		media: `${IMAGE_URL_PREFIX}/low-to-high-pulley.gif`
 	}
 };
 
@@ -118,35 +179,32 @@ type Program = Array<{
 
 export const fullProgram: Program = [
 	{
-		title: 'TERÇA',
-		dayOfWeek: 2,
+		title: 'SEGUNDA',
+		dayOfWeek: 1,
 		exercises: [
 			{
-				...exercises.cleanComplex,
-				kind: 'skill'
-			},
-			{
-				...exercises.hangClean,
+				...exercises.cluster,
 				kind: 'power',
-				prescription: '3 x 2'
+				prescription: '6 x 1'
 			},
 			{
-				...exercises.backSquat,
+				...exercises.backSquatAndBoxJump,
 				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'frontSquat1Rm'
+				prescription: '3 x 3 + 5'
+				// weightPercent: 80,
+				// benchmark: 'frontSquat1Rm'
 			},
 			{
-				...exercises.pullUps,
-				prescription: '3 x MAX'
+				...exercises.pullUpAndBallSlam,
+				kind: 'strength',
+				prescription: '3 x 3 + 5'
 			},
 			{
-				...exercises.oneLegRdl,
+				...exercises.kneelingOneArmDbPress,
 				prescription: '3 x 6 + 6'
 			},
 			{
-				...exercises.shoulderComplex,
+				...exercises.frontMedballThrow,
 				prescription: '3 x 6 + 6'
 			}
 		]
@@ -156,67 +214,25 @@ export const fullProgram: Program = [
 		dayOfWeek: 3,
 		exercises: [
 			{
-				...exercises.shoulderAndCore,
-				kind: 'skill'
-			},
-			{
-				...exercises.deadlift,
+				...exercises.deadliftAndBoardJump,
 				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'deadlift1Rm'
+				prescription: '3 x 3 + 5'
 			},
 			{
-				...exercises.pushPress,
+				...exercises.benchPressAndPlyoPushup,
 				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'shoulderPress1Rm'
+				prescription: '3 x 3 + 10'
 			},
 			{
-				...exercises.lowToHighWoodchop,
+				...exercises.oneArmThruster,
 				prescription: '3 x 6 + 6'
 			},
 			{
-				...exercises.bulgarianSquat,
+				...exercises.lateralMedballThrow,
 				prescription: '3 x 6 + 6'
 			},
 			{
-				...exercises.oneArmBenchPress,
-				prescription: '3 x 6 + 6'
-			}
-		]
-	},
-	{
-		title: 'QUINTA',
-		dayOfWeek: 4,
-		exercises: [
-			{
-				...exercises.hipsAndCore,
-				kind: 'skill'
-			},
-			{
-				...exercises.powerClean,
-				kind: 'power',
-				prescription: '3 x 2'
-			},
-			{
-				...exercises.benchPress,
-				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'benchPress1Rm'
-			},
-			{
-				...exercises.splitSquat,
-				prescription: '3 x 6 + 6'
-			},
-			{
-				...exercises.splitStanceOneArmPress,
-				prescription: '3 x 6 + 6'
-			},
-			{
-				...exercises.oneLegHipThrust,
+				...exercises.spidermanJump,
 				prescription: '3 x 6 + 6'
 			}
 		]
@@ -226,33 +242,25 @@ export const fullProgram: Program = [
 		dayOfWeek: 5,
 		exercises: [
 			{
-				...exercises.shoulderAndCore,
-				kind: 'skill'
+				...exercises.hangCleanAndJerk,
+				kind: 'power',
+				prescription: '5 x 2'
 			},
 			{
-				...exercises.frontSquat,
+				...exercises.boxSquat,
 				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'frontSquat1Rm'
+				prescription: '3 x 5'
 			},
 			{
-				...exercises.bentOverRow,
-				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'benchPress1Rm'
+				...exercises.kbSwing,
+				prescription: '3 x 12'
 			},
 			{
-				...exercises.spidermanTwist,
+				...exercises.twoPtOneArmDbRow,
 				prescription: '3 x 6 + 6'
 			},
 			{
-				...exercises.lateralLungeAndStepUp,
-				prescription: '3 x 6 + 6'
-			},
-			{
-				...exercises.bisAndTris,
+				...exercises.lowToHighPulley,
 				prescription: '3 x 10 + 10'
 			}
 		]

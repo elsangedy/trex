@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onDestroy } from 'svelte';
-	import { doc, setDoc } from 'firebase/firestore';
+	import { onDestroy, onMount } from 'svelte';
+	import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
 
 	import * as Button from '@smui/button';
 	import * as Dialog from '@smui/dialog';
@@ -145,6 +145,20 @@
 			$feedbacksOpen = false;
 		}
 	};
+
+	// onMount(async () => {
+	// 	const snapshot = await getDocs(collection(firestore, 'feedbacks'));
+	// 	const feedbacks = snapshot.docs.reduce((acc, doc) => {
+	// 		Object.values(doc.data()).forEach((value) => {
+	// 			acc.push({
+	// 				date: doc.id,
+	// 				...value
+	// 			});
+	// 		});
+	// 		return acc;
+	// 	}, [] as any[]);
+	// 	console.log(JSON.stringify(feedbacks));
+	// });
 </script>
 
 <Dialog.default
