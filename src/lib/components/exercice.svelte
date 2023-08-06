@@ -7,6 +7,7 @@
 	export let prescription: string | undefined = undefined;
 	export let weight: number | undefined = undefined;
 	export let weightPercent: number | undefined = undefined;
+	export let weightText: string | undefined = undefined;
 	export let media: string | undefined = undefined;
 	export let kind: 'warmup' | 'skill' | 'strength' | 'power' | undefined = undefined;
 
@@ -30,10 +31,10 @@
 			</List.SecondaryText>
 		{/if}
 	</List.Text>
-	{#if weightComputed}
+	{#if weightComputed || weightText}
 		<List.Meta>
 			<div style="text-align: right">
-				{weightComputed}kg
+				{weightComputed || weightText}kg
 			</div>
 			<div style="text-align: right">
 				{#if weightPercent}{weightPercent}%{/if}

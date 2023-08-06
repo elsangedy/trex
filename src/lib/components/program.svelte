@@ -28,6 +28,7 @@
 							kind={exercise.kind}
 							prescription={exercise.prescription}
 							weight={exercise.benchmark ? benchmarks[exercise.benchmark] : undefined}
+							weightText={exercise.weightText}
 							weightPercent={exercise.weightPercent}
 						/>
 						<List.Separator />

@@ -172,6 +172,7 @@ type Program = Array<{
 		media?: string;
 		kind?: 'warmup' | 'skill' | 'strength' | 'power';
 		prescription?: string;
+		weightText?: string;
 		weightPercent?: number;
 		benchmark?: string;
 	}>;
@@ -190,7 +191,8 @@ export const fullProgram: Program = [
 			{
 				...exercises.backSquatAndBoxJump,
 				kind: 'strength',
-				prescription: '3 x 3 + 5'
+				prescription: '3 x 3 + 5',
+				weightText: '80-100-120-140'
 				// weightPercent: 80,
 				// benchmark: 'frontSquat1Rm'
 			},
@@ -216,12 +218,14 @@ export const fullProgram: Program = [
 			{
 				...exercises.deadliftAndBoardJump,
 				kind: 'strength',
-				prescription: '3 x 3 + 5'
+				prescription: '3 x 3 + 5',
+				weightText: '80-100-120-140'
 			},
 			{
 				...exercises.benchPressAndPlyoPushup,
 				kind: 'strength',
-				prescription: '3 x 3 + 10'
+				prescription: '3 x 3 + 10',
+				weightText: '80-100-120-140'
 			},
 			{
 				...exercises.oneArmThruster,
@@ -249,7 +253,8 @@ export const fullProgram: Program = [
 			{
 				...exercises.boxSquat,
 				kind: 'strength',
-				prescription: '3 x 5'
+				prescription: '3 x 5',
+				weightText: '80-100-120-140'
 			},
 			{
 				...exercises.kbSwing,
@@ -267,109 +272,4 @@ export const fullProgram: Program = [
 	}
 ];
 
-export const shortProgram: Program = [
-	{
-		title: 'SEGUNDA',
-		dayOfWeek: 1,
-		exercises: [
-			{
-				...exercises.cleanComplex,
-				kind: 'skill'
-			},
-			{
-				...exercises.hangClean,
-				kind: 'power',
-				prescription: '5 x 3'
-			},
-			{
-				...exercises.backSquat,
-				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'frontSquat1Rm'
-			},
-			{
-				...exercises.pullUps,
-				prescription: '3 x MAX'
-			},
-			{
-				...exercises.oneLegRdl,
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.shoulderComplex,
-				prescription: '3 x 8 + 8'
-			}
-		]
-	},
-	{
-		title: 'QUARTA',
-		dayOfWeek: 3,
-		exercises: [
-			{
-				...exercises.shoulderAndCore,
-				kind: 'skill'
-			},
-			{
-				...exercises.deadlift,
-				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'deadlift1Rm'
-			},
-			{
-				...exercises.pushPress,
-				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'shoulderPress1Rm'
-			},
-			{
-				...exercises.lowToHighWoodchop,
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.bulgarianSquat,
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.oneArmBenchPress,
-				prescription: '3 x 8 + 8'
-			}
-		]
-	},
-	{
-		title: 'SEXTA',
-		dayOfWeek: 5,
-		exercises: [
-			{
-				...exercises.hipsAndCore,
-				kind: 'skill'
-			},
-			{
-				...exercises.powerClean,
-				kind: 'power',
-				prescription: '5 x 3'
-			},
-			{
-				...exercises.benchPress,
-				kind: 'strength',
-				prescription: '2 x 3',
-				weightPercent: 80,
-				benchmark: 'benchPress1Rm'
-			},
-			{
-				...exercises.splitSquat,
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.splitStanceOneArmPress,
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.oneLegHipThrust,
-				prescription: '3 x 8 + 8'
-			}
-		]
-	}
-];
+export const shortProgram: Program = [];
