@@ -207,7 +207,7 @@ export const fullProgram: Program = [
 			},
 			{
 				...exercises.frontMedballThrow,
-				prescription: '3 x 6 + 6'
+				prescription: '3 x 3 + 3'
 			}
 		]
 	},
@@ -233,7 +233,7 @@ export const fullProgram: Program = [
 			},
 			{
 				...exercises.lateralMedballThrow,
-				prescription: '3 x 6 + 6'
+				prescription: '3 x 3 + 3'
 			},
 			{
 				...exercises.spidermanJump,
