@@ -186,28 +186,26 @@ export const fullProgram: Program = [
 			{
 				...exercises.cluster,
 				kind: 'power',
-				prescription: '6 x 1'
+				prescription: '3 x 1'
 			},
 			{
 				...exercises.backSquatAndBoxJump,
 				kind: 'strength',
-				prescription: '3 x 3 + 5',
+				prescription: '3 x 2 + 3',
 				weightText: '80-100-120-140'
-				// weightPercent: 80,
-				// benchmark: 'frontSquat1Rm'
 			},
 			{
 				...exercises.pullUpAndBallSlam,
 				kind: 'strength',
-				prescription: '3 x 3 + 5'
+				prescription: '3 x 2 + 3'
 			},
 			{
 				...exercises.kneelingOneArmDbPress,
-				prescription: '3 x 6 + 6'
+				prescription: '2 x 6 + 6'
 			},
 			{
 				...exercises.frontMedballThrow,
-				prescription: '3 x 3 + 3'
+				prescription: '2 x 3 + 3'
 			}
 		]
 	},
@@ -218,58 +216,58 @@ export const fullProgram: Program = [
 			{
 				...exercises.deadliftAndBoardJump,
 				kind: 'strength',
-				prescription: '3 x 3 + 5',
+				prescription: '3 x 2 + 3',
 				weightText: '80-100-120-140'
 			},
 			{
 				...exercises.benchPressAndPlyoPushup,
 				kind: 'strength',
-				prescription: '3 x 3 + 10',
+				prescription: '3 x 2 + 6',
 				weightText: '80-100-120-140'
 			},
 			{
 				...exercises.oneArmThruster,
-				prescription: '3 x 6 + 6'
+				prescription: '2 x 6 + 6'
 			},
 			{
 				...exercises.lateralMedballThrow,
-				prescription: '3 x 3 + 3'
+				prescription: '2 x 3 + 3'
 			},
 			{
 				...exercises.spidermanJump,
-				prescription: '3 x 6 + 6'
-			}
-		]
-	},
-	{
-		title: 'SEXTA',
-		dayOfWeek: 5,
-		exercises: [
-			{
-				...exercises.hangCleanAndJerk,
-				kind: 'power',
-				prescription: '5 x 2'
-			},
-			{
-				...exercises.boxSquat,
-				kind: 'strength',
-				prescription: '3 x 5',
-				weightText: '80-100-120-140'
-			},
-			{
-				...exercises.kbSwing,
-				prescription: '3 x 12'
-			},
-			{
-				...exercises.twoPtOneArmDbRow,
-				prescription: '3 x 6 + 6'
-			},
-			{
-				...exercises.lowToHighPulley,
-				prescription: '3 x 10 + 10'
+				prescription: '2 x 6 + 6'
 			}
 		]
 	}
+	// {
+	// 	title: 'SEXTA',
+	// 	dayOfWeek: 5,
+	// 	exercises: [
+	// 		{
+	// 			...exercises.hangCleanAndJerk,
+	// 			kind: 'power',
+	// 			prescription: '5 x 2'
+	// 		},
+	// 		{
+	// 			...exercises.boxSquat,
+	// 			kind: 'strength',
+	// 			prescription: '3 x 5',
+	// 			weightText: '80-100-120-140'
+	// 		},
+	// 		{
+	// 			...exercises.kbSwing,
+	// 			prescription: '3 x 12'
+	// 		},
+	// 		{
+	// 			...exercises.twoPtOneArmDbRow,
+	// 			prescription: '3 x 6 + 6'
+	// 		},
+	// 		{
+	// 			...exercises.lowToHighPulley,
+	// 			prescription: '3 x 10 + 10'
+	// 		}
+	// 	]
+	// }
 ];
 
 export const shortProgram: Program = [];
