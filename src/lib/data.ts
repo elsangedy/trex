@@ -284,8 +284,7 @@ export const fullProgram: Program = [
 				...exercises.rdl,
 				kind: 'strength',
 				prescription: '3 x 5',
-				benchmark: 'deadlift1Rm',
-				weightPercent: 70
+				weightText: '60kg+'
 			},
 			{
 				...exercises.frontSquat,
