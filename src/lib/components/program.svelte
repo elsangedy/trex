@@ -19,7 +19,7 @@
 			<Accordion.Header>{session.title}</Accordion.Header>
 			<Accordion.Content class="accordion-content">
 				<List.default twoLine>
-					<Exercice {...exercises.warmupAndCore} kind="warmup" />
+					<Exercice {...exercises.warmupAndCore} />
 					<List.Separator />
 					{#each session.exercises as exercise}
 						<Exercice
