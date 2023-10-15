@@ -12,6 +12,10 @@
 
 	const BENCHMARKS_CONFIG = [
 		{
+			id: 'backSquat1Rm',
+			label: 'Back Squat 1RM'
+		},
+		{
 			id: 'frontSquat1Rm',
 			label: 'Front Squat 1RM'
 		},

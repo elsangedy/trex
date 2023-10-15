@@ -161,6 +161,23 @@ export const exercises = {
 	lowToHighPulley: {
 		name: 'LOW TO HIGH PULLEY',
 		media: `${IMAGE_URL_PREFIX}/low-to-high-pulley.gif`
+	},
+	// TODO: missing video
+	invertedRow: {
+		name: 'INVERTED ROW'
+		// media: `${IMAGE_URL_PREFIX}/inverted-row.gif`
+	},
+	clean: {
+		name: 'CLEAN'
+		// media: `${IMAGE_URL_PREFIX}/clean.gif`
+	},
+	rdl: {
+		name: 'RDL'
+		// media: `${IMAGE_URL_PREFIX}/rdl.gif`
+	},
+	lateralStepUp: {
+		name: 'LATERAL STEP UP'
+		// media: `${IMAGE_URL_PREFIX}/lateral-step-up.gif`
 	}
 };
 
@@ -184,28 +201,38 @@ export const fullProgram: Program = [
 		dayOfWeek: 1,
 		exercises: [
 			{
-				...exercises.cluster,
-				kind: 'power',
-				prescription: '3 x 1'
+				...exercises.hangClean,
+				kind: 'skill',
+				prescription: '[1] + 4 x 3'
 			},
 			{
-				...exercises.backSquatAndBoxJump,
+				...exercises.backSquat,
 				kind: 'strength',
-				prescription: '3 x 2 + 3',
-				weightText: '80-100-120-140'
+				prescription: '3 x 5',
+				benchmark: 'backSquat1Rm',
+				weightPercent: 70
 			},
 			{
-				...exercises.pullUpAndBallSlam,
+				...exercises.pushPress,
 				kind: 'strength',
-				prescription: '3 x 2 + 3'
+				prescription: '3 x 5',
+				benchmark: 'shoulderPress1Rm',
+				weightPercent: 70
 			},
 			{
-				...exercises.kneelingOneArmDbPress,
-				prescription: '2 x 6 + 6'
+				...exercises.invertedRow,
+				kind: 'warmup',
+				prescription: '3 x 10-12'
+			},
+			{
+				...exercises.oneLegRdl,
+				kind: 'warmup',
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.frontMedballThrow,
-				prescription: '2 x 3 + 3'
+				kind: 'power',
+				prescription: '3 x 6 + 6'
 			}
 		]
 	},
@@ -214,60 +241,76 @@ export const fullProgram: Program = [
 		dayOfWeek: 3,
 		exercises: [
 			{
-				...exercises.deadliftAndBoardJump,
-				kind: 'strength',
-				prescription: '3 x 2 + 3',
-				weightText: '80-100-120-140'
+				...exercises.clean,
+				kind: 'skill',
+				prescription: '[1] + 4 x 3'
 			},
 			{
-				...exercises.benchPressAndPlyoPushup,
+				...exercises.deadlift,
 				kind: 'strength',
-				prescription: '3 x 2 + 6',
-				weightText: '80-100-120-140'
+				prescription: '3 x 5',
+				benchmark: 'deadlift1Rm',
+				weightPercent: 70
 			},
 			{
-				...exercises.oneArmThruster,
-				prescription: '2 x 6 + 6'
+				...exercises.benchPress,
+				kind: 'strength',
+				prescription: '3 x 5',
+				benchmark: 'benchPress1Rm',
+				weightPercent: 70
+			},
+			{
+				...exercises.pullUps,
+				kind: 'warmup',
+				prescription: '3 x 10'
+			},
+			{
+				...exercises.bulgarianSquat,
+				kind: 'warmup',
+				prescription: '3 x 6 + 6'
 			},
 			{
 				...exercises.lateralMedballThrow,
-				prescription: '2 x 3 + 3'
+				kind: 'power',
+				prescription: '3 x 6 + 6'
+			}
+		]
+	},
+	{
+		title: 'SEXTA',
+		dayOfWeek: 5,
+		exercises: [
+			{
+				...exercises.rdl,
+				kind: 'strength',
+				prescription: '3 x 5',
+				benchmark: 'deadlift1Rm',
+				weightPercent: 70
 			},
 			{
-				...exercises.spidermanJump,
-				prescription: '2 x 6 + 6'
+				...exercises.frontSquat,
+				kind: 'strength',
+				prescription: '3 x 5',
+				benchmark: 'frontSquat1Rm',
+				weightPercent: 70
+			},
+			{
+				...exercises.oneArmBenchPress,
+				kind: 'warmup',
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.shoulderComplex,
+				kind: 'warmup',
+				prescription: '3 x 10 + 10 + 10'
+			},
+			{
+				...exercises.lateralStepUp,
+				kind: 'warmup',
+				prescription: '3 x 6 + 6'
 			}
 		]
 	}
-	// {
-	// 	title: 'SEXTA',
-	// 	dayOfWeek: 5,
-	// 	exercises: [
-	// 		{
-	// 			...exercises.hangCleanAndJerk,
-	// 			kind: 'power',
-	// 			prescription: '5 x 2'
-	// 		},
-	// 		{
-	// 			...exercises.boxSquat,
-	// 			kind: 'strength',
-	// 			prescription: '3 x 5',
-	// 			weightText: '80-100-120-140'
-	// 		},
-	// 		{
-	// 			...exercises.kbSwing,
-	// 			prescription: '3 x 12'
-	// 		},
-	// 		{
-	// 			...exercises.twoPtOneArmDbRow,
-	// 			prescription: '3 x 6 + 6'
-	// 		},
-	// 		{
-	// 			...exercises.lowToHighPulley,
-	// 			prescription: '3 x 10 + 10'
-	// 		}
-	// 	]
-	// }
 ];
 
 export const shortProgram: Program = [];
