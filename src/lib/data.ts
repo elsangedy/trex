@@ -5,14 +5,6 @@ export const exercises = {
 		name: 'WARMUP / CORE',
 		media: `${IMAGE_URL_PREFIX}/warmup.png`
 	},
-	coolDown: {
-		name: 'COOL DOWN'
-		// media: `${IMAGE_URL_PREFIX}/cool-down.gif`
-	},
-	cleanComplex: {
-		name: 'CLEAN COMPLEX'
-		// media: `${IMAGE_URL_PREFIX}/clean-complex.gif`
-	},
 	hangClean: {
 		name: 'HANG CLEAN',
 		media: `${IMAGE_URL_PREFIX}/hang-squat-clean.gif`
@@ -32,10 +24,6 @@ export const exercises = {
 	shoulderComplex: {
 		name: 'SHOULDER COMPLEX',
 		media: `${IMAGE_URL_PREFIX}/shoulder-complex-front.gif`
-	},
-	shoulderAndCore: {
-		name: 'SHOULDER / CORE'
-		// media: `${IMAGE_URL_PREFIX}/shoulder-and-core.gif`
 	},
 	deadlift: {
 		name: 'DEADLIFT',
@@ -57,11 +45,7 @@ export const exercises = {
 		name: '1 ARM BENCH PRESS',
 		media: `${IMAGE_URL_PREFIX}/1-arm-db-bench-press.gif`
 	},
-	hipsAndCore: {
-		name: 'HIPS / CORE'
-		// media: `${IMAGE_URL_PREFIX}/hips-and-core.gif`
-	},
-	powerClean: {
+	hangPowerClean: {
 		name: 'POWER CLEAN',
 		media: `${IMAGE_URL_PREFIX}/hang-power-clean.gif`
 	},
@@ -97,11 +81,6 @@ export const exercises = {
 		name: 'LATERAL LUNGE / STEP UP',
 		media: `${IMAGE_URL_PREFIX}/lateral-lunge-and-step-up.gif`
 	},
-	bisAndTris: {
-		name: 'BIS / TRIS'
-		// media: `${IMAGE_URL_PREFIX}/bis-and-tris.gif`
-	},
-
 	cluster: {
 		name: 'CLUSTER',
 		media: `${IMAGE_URL_PREFIX}/cluster.gif`
@@ -163,12 +142,36 @@ export const exercises = {
 		media: `${IMAGE_URL_PREFIX}/low-to-high-pulley.gif`
 	},
 	// TODO: missing video
+	coolDown: {
+		name: 'COOL DOWN'
+		// media: `${IMAGE_URL_PREFIX}/cool-down.gif`
+	},
+	cleanComplex: {
+		name: 'CLEAN COMPLEX'
+		// media: `${IMAGE_URL_PREFIX}/clean-complex.gif`
+	},
+	shoulderAndCore: {
+		name: 'SHOULDER / CORE'
+		// media: `${IMAGE_URL_PREFIX}/shoulder-and-core.gif`
+	},
+	hipsAndCore: {
+		name: 'HIPS / CORE'
+		// media: `${IMAGE_URL_PREFIX}/hips-and-core.gif`
+	},
+	bisAndTris: {
+		name: 'BIS / TRIS'
+		// media: `${IMAGE_URL_PREFIX}/bis-and-tris.gif`
+	},
 	invertedRow: {
 		name: 'INVERTED ROW'
 		// media: `${IMAGE_URL_PREFIX}/inverted-row.gif`
 	},
 	clean: {
 		name: 'CLEAN'
+		// media: `${IMAGE_URL_PREFIX}/clean.gif`
+	},
+	powerClean: {
+		name: 'POWER CLEAN'
 		// media: `${IMAGE_URL_PREFIX}/clean.gif`
 	},
 	rdl: {
@@ -197,11 +200,11 @@ type Program = Array<{
 
 export const fullProgram: Program = [
 	{
-		title: 'SEGUNDA',
-		dayOfWeek: 1,
+		title: 'TERÇA',
+		dayOfWeek: 2,
 		exercises: [
 			{
-				...exercises.hangClean,
+				...exercises.powerClean,
 				kind: 'skill',
 				prescription: '[1] + 4 x 3'
 			},
@@ -237,11 +240,11 @@ export const fullProgram: Program = [
 		]
 	},
 	{
-		title: 'QUARTA',
-		dayOfWeek: 3,
+		title: 'QUINTA',
+		dayOfWeek: 4,
 		exercises: [
 			{
-				...exercises.clean,
+				...exercises.hangClean,
 				kind: 'skill',
 				prescription: '[1] + 4 x 3'
 			},
@@ -275,41 +278,41 @@ export const fullProgram: Program = [
 				prescription: '3 x 6 + 6'
 			}
 		]
-	},
-	{
-		title: 'SEXTA',
-		dayOfWeek: 5,
-		exercises: [
-			{
-				...exercises.rdl,
-				kind: 'strength',
-				prescription: '3 x 5',
-				weightText: '60kg+'
-			},
-			{
-				...exercises.frontSquat,
-				kind: 'strength',
-				prescription: '3 x 5',
-				benchmark: 'frontSquat1Rm',
-				weightPercent: 70
-			},
-			{
-				...exercises.oneArmBenchPress,
-				kind: 'warmup',
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.shoulderComplex,
-				kind: 'warmup',
-				prescription: '3 x 10 + 10 + 10'
-			},
-			{
-				...exercises.lateralStepUp,
-				kind: 'warmup',
-				prescription: '3 x 6 + 6'
-			}
-		]
 	}
+	// {
+	// 	title: 'SEXTA',
+	// 	dayOfWeek: 5,
+	// 	exercises: [
+	// 		{
+	// 			...exercises.rdl,
+	// 			kind: 'strength',
+	// 			prescription: '3 x 5',
+	// 			weightText: '60kg+'
+	// 		},
+	// 		{
+	// 			...exercises.frontSquat,
+	// 			kind: 'strength',
+	// 			prescription: '3 x 5',
+	// 			benchmark: 'frontSquat1Rm',
+	// 			weightPercent: 70
+	// 		},
+	// 		{
+	// 			...exercises.oneArmBenchPress,
+	// 			kind: 'warmup',
+	// 			prescription: '3 x 8 + 8'
+	// 		},
+	// 		{
+	// 			...exercises.shoulderComplex,
+	// 			kind: 'warmup',
+	// 			prescription: '3 x 10 + 10 + 10'
+	// 		},
+	// 		{
+	// 			...exercises.lateralStepUp,
+	// 			kind: 'warmup',
+	// 			prescription: '3 x 6 + 6'
+	// 		}
+	// 	]
+	// }
 ];
 
 export const shortProgram: Program = [];
