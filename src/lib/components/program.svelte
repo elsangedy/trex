@@ -2,13 +2,13 @@
 	import * as List from '@smui/list';
 	import * as Accordion from '@smui-extra/accordion';
 
-	import { exercises, fullProgram, shortProgram } from '$lib/data';
+	import { exercises, mainProgram, customProgram } from '$lib/data';
 
 	import Exercice from './exercice.svelte';
 
 	export let benchmarks: Record<string, number> = {};
-	export let program: 'full' | 'short' | undefined = 'full';
-	const sessions = program === 'full' ? fullProgram : shortProgram;
+	export let program: 'main' | 'custom' | undefined = 'main';
+	const sessions = program === 'main' ? mainProgram : customProgram;
 
 	const dayOfWeek = new Date().getDay();
 </script>

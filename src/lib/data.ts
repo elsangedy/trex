@@ -141,6 +141,14 @@ export const exercises = {
 		name: 'LOW TO HIGH PULLEY',
 		media: `${IMAGE_URL_PREFIX}/low-to-high-pulley.gif`
 	},
+	invertedRow: {
+		name: 'INVERTED ROW',
+		media: `${IMAGE_URL_PREFIX}/inverted-row.gif`
+	},
+	lateralStepUp: {
+		name: 'LATERAL STEP UP',
+		media: `${IMAGE_URL_PREFIX}/lateral-step-up.gif`
+	},
 	// TODO: missing video
 	coolDown: {
 		name: 'COOL DOWN'
@@ -162,10 +170,6 @@ export const exercises = {
 		name: 'BIS / TRIS'
 		// media: `${IMAGE_URL_PREFIX}/bis-and-tris.gif`
 	},
-	invertedRow: {
-		name: 'INVERTED ROW'
-		// media: `${IMAGE_URL_PREFIX}/inverted-row.gif`
-	},
 	clean: {
 		name: 'CLEAN'
 		// media: `${IMAGE_URL_PREFIX}/clean.gif`
@@ -177,10 +181,6 @@ export const exercises = {
 	rdl: {
 		name: 'RDL'
 		// media: `${IMAGE_URL_PREFIX}/rdl.gif`
-	},
-	lateralStepUp: {
-		name: 'LATERAL STEP UP'
-		// media: `${IMAGE_URL_PREFIX}/lateral-step-up.gif`
 	}
 };
 
@@ -198,7 +198,7 @@ type Program = Array<{
 	}>;
 }>;
 
-export const fullProgram: Program = [
+export const mainProgram: Program = [
 	{
 		title: 'TERÇA',
 		dayOfWeek: 2,
@@ -315,4 +315,119 @@ export const fullProgram: Program = [
 	// }
 ];
 
-export const shortProgram: Program = [];
+export const customProgram: Program = [
+	{
+		title: 'SEGUNDA',
+		dayOfWeek: 1,
+		exercises: [
+			{
+				...exercises.powerClean,
+				kind: 'skill',
+				prescription: '[1] + 4 x 3'
+			},
+			{
+				...exercises.backSquat,
+				kind: 'strength',
+				prescription: '3 x 5',
+				benchmark: 'backSquat1Rm',
+				weightPercent: 70
+			},
+			{
+				...exercises.pushPress,
+				kind: 'strength',
+				prescription: '3 x 5',
+				benchmark: 'shoulderPress1Rm',
+				weightPercent: 70
+			},
+			{
+				...exercises.invertedRow,
+				kind: 'warmup',
+				prescription: '3 x 10-12'
+			},
+			{
+				...exercises.oneLegRdl,
+				kind: 'warmup',
+				prescription: '3 x 6 + 6'
+			},
+			{
+				...exercises.frontMedballThrow,
+				kind: 'power',
+				prescription: '3 x 6 + 6'
+			}
+		]
+	},
+	{
+		title: 'QUARTA',
+		dayOfWeek: 3,
+		exercises: [
+			{
+				...exercises.hangClean,
+				kind: 'skill',
+				prescription: '[1] + 4 x 3'
+			},
+			{
+				...exercises.deadlift,
+				kind: 'strength',
+				prescription: '3 x 5',
+				benchmark: 'deadlift1Rm',
+				weightPercent: 70
+			},
+			{
+				...exercises.benchPress,
+				kind: 'strength',
+				prescription: '3 x 5',
+				benchmark: 'benchPress1Rm',
+				weightPercent: 70
+			},
+			{
+				...exercises.pullUps,
+				kind: 'warmup',
+				prescription: '3 x 10'
+			},
+			{
+				...exercises.bulgarianSquat,
+				kind: 'warmup',
+				prescription: '3 x 6 + 6'
+			},
+			{
+				...exercises.lateralMedballThrow,
+				kind: 'power',
+				prescription: '3 x 6 + 6'
+			}
+		]
+	},
+	{
+		title: 'SEXTA',
+		dayOfWeek: 5,
+		exercises: [
+			{
+				...exercises.rdl,
+				kind: 'strength',
+				prescription: '3 x 5',
+				weightText: '60kg+'
+			},
+			{
+				...exercises.frontSquat,
+				kind: 'strength',
+				prescription: '3 x 5',
+				benchmark: 'frontSquat1Rm',
+				weightPercent: 70
+			},
+			{
+				...exercises.oneArmBenchPress,
+				kind: 'warmup',
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.shoulderComplex,
+				kind: 'warmup',
+				prescription: '3 x 10 + 10 + 10'
+			},
+			{
+				...exercises.lateralStepUp,
+				kind: 'warmup',
+				prescription: '3 x 6 + 6'
+			}
+		]
+	}
+];
