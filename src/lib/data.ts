@@ -200,123 +200,6 @@ type Program = Array<{
 
 export const mainProgram: Program = [
 	{
-		title: 'TERÇA',
-		dayOfWeek: 2,
-		exercises: [
-			{
-				...exercises.powerClean,
-				kind: 'skill',
-				prescription: '[1] + 4 x 3'
-			},
-			{
-				...exercises.backSquat,
-				kind: 'strength',
-				prescription: '3 x 5',
-				benchmark: 'backSquat1Rm',
-				weightPercent: 70
-			},
-			{
-				...exercises.pushPress,
-				kind: 'strength',
-				prescription: '3 x 5',
-				benchmark: 'shoulderPress1Rm',
-				weightPercent: 70
-			},
-			{
-				...exercises.invertedRow,
-				kind: 'warmup',
-				prescription: '3 x 10-12'
-			},
-			{
-				...exercises.oneLegRdl,
-				kind: 'warmup',
-				prescription: '3 x 6 + 6'
-			},
-			{
-				...exercises.frontMedballThrow,
-				kind: 'power',
-				prescription: '3 x 6 + 6'
-			}
-		]
-	},
-	{
-		title: 'QUINTA',
-		dayOfWeek: 4,
-		exercises: [
-			{
-				...exercises.hangClean,
-				kind: 'skill',
-				prescription: '[1] + 4 x 3'
-			},
-			{
-				...exercises.deadlift,
-				kind: 'strength',
-				prescription: '3 x 5',
-				benchmark: 'deadlift1Rm',
-				weightPercent: 70
-			},
-			{
-				...exercises.benchPress,
-				kind: 'strength',
-				prescription: '3 x 5',
-				benchmark: 'benchPress1Rm',
-				weightPercent: 70
-			},
-			{
-				...exercises.pullUps,
-				kind: 'warmup',
-				prescription: '3 x 10'
-			},
-			{
-				...exercises.bulgarianSquat,
-				kind: 'warmup',
-				prescription: '3 x 6 + 6'
-			},
-			{
-				...exercises.lateralMedballThrow,
-				kind: 'power',
-				prescription: '3 x 6 + 6'
-			}
-		]
-	}
-	// {
-	// 	title: 'SEXTA',
-	// 	dayOfWeek: 5,
-	// 	exercises: [
-	// 		{
-	// 			...exercises.rdl,
-	// 			kind: 'strength',
-	// 			prescription: '3 x 5',
-	// 			weightText: '60kg+'
-	// 		},
-	// 		{
-	// 			...exercises.frontSquat,
-	// 			kind: 'strength',
-	// 			prescription: '3 x 5',
-	// 			benchmark: 'frontSquat1Rm',
-	// 			weightPercent: 70
-	// 		},
-	// 		{
-	// 			...exercises.oneArmBenchPress,
-	// 			kind: 'warmup',
-	// 			prescription: '3 x 8 + 8'
-	// 		},
-	// 		{
-	// 			...exercises.shoulderComplex,
-	// 			kind: 'warmup',
-	// 			prescription: '3 x 10 + 10 + 10'
-	// 		},
-	// 		{
-	// 			...exercises.lateralStepUp,
-	// 			kind: 'warmup',
-	// 			prescription: '3 x 6 + 6'
-	// 		}
-	// 	]
-	// }
-];
-
-export const customProgram: Program = [
-	{
 		title: 'SEGUNDA',
 		dayOfWeek: 1,
 		exercises: [
@@ -431,3 +314,5 @@ export const customProgram: Program = [
 		]
 	}
 ];
+
+export const customProgram: Program = mainProgram;
