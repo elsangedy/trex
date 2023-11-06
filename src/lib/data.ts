@@ -200,8 +200,8 @@ type Program = Array<{
 
 export const mainProgram: Program = [
 	{
-		title: 'SEGUNDA',
-		dayOfWeek: 1,
+		title: 'TERÇA',
+		dayOfWeek: 2,
 		exercises: [
 			{
 				...exercises.powerClean,
@@ -240,8 +240,8 @@ export const mainProgram: Program = [
 		]
 	},
 	{
-		title: 'QUARTA',
-		dayOfWeek: 3,
+		title: 'QUINTA',
+		dayOfWeek: 4,
 		exercises: [
 			{
 				...exercises.hangClean,
@@ -278,41 +278,41 @@ export const mainProgram: Program = [
 				prescription: '3 x 6 + 6'
 			}
 		]
-	},
-	{
-		title: 'SEXTA',
-		dayOfWeek: 5,
-		exercises: [
-			{
-				...exercises.rdl,
-				kind: 'strength',
-				prescription: '3 x 5',
-				weightText: '60kg+'
-			},
-			{
-				...exercises.frontSquat,
-				kind: 'strength',
-				prescription: '3 x 5',
-				benchmark: 'frontSquat1Rm',
-				weightPercent: 70
-			},
-			{
-				...exercises.oneArmBenchPress,
-				kind: 'warmup',
-				prescription: '3 x 8 + 8'
-			},
-			{
-				...exercises.shoulderComplex,
-				kind: 'warmup',
-				prescription: '3 x 10 + 10 + 10'
-			},
-			{
-				...exercises.lateralStepUp,
-				kind: 'warmup',
-				prescription: '3 x 6 + 6'
-			}
-		]
 	}
+	// {
+	// 	title: 'SEXTA',
+	// 	dayOfWeek: 5,
+	// 	exercises: [
+	// 		{
+	// 			...exercises.rdl,
+	// 			kind: 'strength',
+	// 			prescription: '3 x 5',
+	// 			weightText: '60kg+'
+	// 		},
+	// 		{
+	// 			...exercises.frontSquat,
+	// 			kind: 'strength',
+	// 			prescription: '3 x 5',
+	// 			benchmark: 'frontSquat1Rm',
+	// 			weightPercent: 70
+	// 		},
+	// 		{
+	// 			...exercises.oneArmBenchPress,
+	// 			kind: 'warmup',
+	// 			prescription: '3 x 8 + 8'
+	// 		},
+	// 		{
+	// 			...exercises.shoulderComplex,
+	// 			kind: 'warmup',
+	// 			prescription: '3 x 10 + 10 + 10'
+	// 		},
+	// 		{
+	// 			...exercises.lateralStepUp,
+	// 			kind: 'warmup',
+	// 			prescription: '3 x 6 + 6'
+	// 		}
+	// 	]
+	// }
 ];
 
 export const customProgram: Program = mainProgram;
