@@ -310,7 +310,7 @@ export const mainProgram: Program = [
 		]
 	},
 	{
-		title: 'QUARTA',
+		title: 'QUINTA',
 		dayOfWeek: 4,
 		exercises: [
 			{
