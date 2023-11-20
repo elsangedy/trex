@@ -17,7 +17,11 @@ export const exercises = {
 		name: 'PULL UPS',
 		media: `${IMAGE_URL_PREFIX}/pull-ups.gif`
 	},
-	oneLegRdl: {
+	oneDbOnLegRdl: {
+		name: '1 LEG RDL',
+		media: `${IMAGE_URL_PREFIX}/1-db-1-leg-rdl.gif`
+	},
+	twoDbOneLegRdl: {
 		name: '1 LEG RDL',
 		media: `${IMAGE_URL_PREFIX}/2-db-1-leg-rdl.gif`
 	},
@@ -33,12 +37,12 @@ export const exercises = {
 		name: 'PUSH PRESS',
 		media: `${IMAGE_URL_PREFIX}/push-press.gif`
 	},
-	lowToHighWoodchop: {
-		name: 'LOW TO HIGH WOODCHOP',
+	kneelingLowToHighWoodchop: {
+		name: 'KNEELING LOW TO HIGH WOODCHOP',
 		media: `${IMAGE_URL_PREFIX}/kneeling-low-to-high-woodchop.gif`
 	},
-	bulgarianSquat: {
-		name: 'BULGARIAN SQUAT',
+	dbBulgarianSquat: {
+		name: 'DB BULGARIAN SQUAT',
 		media: `${IMAGE_URL_PREFIX}/db-bulgarian-squat.gif`
 	},
 	oneArmBenchPress: {
@@ -56,6 +60,10 @@ export const exercises = {
 	splitSquat: {
 		name: 'SPLIT SQUAT',
 		media: `${IMAGE_URL_PREFIX}/split-squat.gif`
+	},
+	bbSplitSquat: {
+		name: 'BB SPLIT SQUAT',
+		media: `${IMAGE_URL_PREFIX}/bb-split-squat.gif`
 	},
 	splitStanceOneArmPress: {
 		name: 'SPLIT STANCE 1 ARM PRESS',
@@ -149,6 +157,26 @@ export const exercises = {
 		name: 'LATERAL STEP UP',
 		media: `${IMAGE_URL_PREFIX}/lateral-step-up.gif`
 	},
+	cleanPull: {
+		name: 'CLEAN PULL',
+		media: `${IMAGE_URL_PREFIX}/clean-pull.gif`
+	},
+	oneArmDbRow: {
+		name: '1 ARM DB ROW',
+		media: `${IMAGE_URL_PREFIX}/one-arm-db-row.gif`
+	},
+	abWheelRollout: {
+		name: 'AB WHEEL ROLLOUT',
+		media: `${IMAGE_URL_PREFIX}/ab-wheel-rollout.gif`
+	},
+	bandedGoodMorning: {
+		name: 'BANDED GOOD MORNING',
+		media: `${IMAGE_URL_PREFIX}/band-good-morning.gif`
+	},
+	bandedTwist: {
+		name: 'BANDED TWIST',
+		media: `${IMAGE_URL_PREFIX}/banded-twist.gif`
+	},
 	// TODO: missing video
 	coolDown: {
 		name: 'COOL DOWN'
@@ -181,6 +209,18 @@ export const exercises = {
 	rdl: {
 		name: 'RDL'
 		// media: `${IMAGE_URL_PREFIX}/rdl.gif`
+	},
+	backExtension: {
+		name: 'BACK EXTENSION'
+		// media: `${IMAGE_URL_PREFIX}/back-extension.gif`
+	},
+	lateralRipTap: {
+		name: 'LATERAL RIP TAP'
+		// media: `${IMAGE_URL_PREFIX}/lateral-rip-tap.gif`
+	},
+	oneArmOverheadSquat: {
+		name: 'ONE ARM OVERHEAD SQUAT'
+		// media: `${IMAGE_URL_PREFIX}/one-arm-overhead-squat.gif`
 	}
 };
 
@@ -200,119 +240,143 @@ type Program = Array<{
 
 export const mainProgram: Program = [
 	{
-		title: 'TERÇA',
-		dayOfWeek: 2,
+		title: 'SEGUNDA',
+		dayOfWeek: 1,
 		exercises: [
 			{
-				...exercises.powerClean,
+				...exercises.cleanPull,
 				kind: 'skill',
-				prescription: '[1] + 4 x 3'
+				prescription: '4 x 5'
 			},
 			{
 				...exercises.backSquat,
 				kind: 'strength',
-				prescription: '3 x 5',
+				prescription: '4 x 10',
 				benchmark: 'backSquat1Rm',
-				weightPercent: 70
+				weightPercent: 50
 			},
 			{
-				...exercises.pushPress,
-				kind: 'strength',
-				prescription: '3 x 5',
-				benchmark: 'shoulderPress1Rm',
-				weightPercent: 70
+				...exercises.oneArmBenchPress,
+				prescription: '3 x 10 + 10'
 			},
 			{
-				...exercises.invertedRow,
-				kind: 'warmup',
-				prescription: '3 x 10-12'
+				...exercises.backExtension,
+				prescription: '3 x 12'
 			},
 			{
-				...exercises.oneLegRdl,
-				kind: 'warmup',
-				prescription: '3 x 6 + 6'
+				...exercises.oneDbOnLegRdl,
+				prescription: '3 x 8 + 8'
 			},
 			{
-				...exercises.frontMedballThrow,
-				kind: 'power',
-				prescription: '3 x 6 + 6'
+				...exercises.kneelingLowToHighWoodchop,
+				prescription: '3 x 12 + 12'
 			}
 		]
 	},
 	{
-		title: 'QUINTA',
+		title: 'TERÇA',
+		dayOfWeek: 2,
+		exercises: [
+			{
+				...exercises.deadlift,
+				kind: 'strength',
+				prescription: '4 x 10',
+				benchmark: 'deadlift1Rm',
+				weightPercent: 50
+			},
+			{
+				...exercises.pushPress,
+				kind: 'strength',
+				prescription: '4 x 10',
+				benchmark: 'shoulderPress1Rm',
+				weightPercent: 50
+			},
+			{
+				...exercises.oneArmDbRow,
+				prescription: '3 x 10 + 10'
+			},
+			{
+				...exercises.bbSplitSquat,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.shoulderComplex,
+				prescription: '3 x 8 + 8 + 8'
+			},
+			{
+				...exercises.abWheelRollout,
+				prescription: '3 x 12'
+			}
+		]
+	},
+	{
+		title: 'QUARTA',
 		dayOfWeek: 4,
 		exercises: [
 			{
 				...exercises.hangClean,
 				kind: 'skill',
-				prescription: '[1] + 4 x 3'
-			},
-			{
-				...exercises.deadlift,
-				kind: 'strength',
-				prescription: '3 x 5',
-				benchmark: 'deadlift1Rm',
-				weightPercent: 70
+				prescription: '4 x 5'
 			},
 			{
 				...exercises.benchPress,
 				kind: 'strength',
-				prescription: '3 x 5',
+				prescription: '4 x 10',
 				benchmark: 'benchPress1Rm',
-				weightPercent: 70
+				weightPercent: 50
+			},
+			{
+				...exercises.lateralRipTap,
+				prescription: '3 x 10 + 10'
+			},
+			{
+				...exercises.dbBulgarianSquat,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.invertedRow,
+				prescription: '3 x 12'
+			},
+			{
+				...exercises.bandedGoodMorning,
+				prescription: '3 x 12'
+			}
+		]
+	},
+	{
+		title: 'SEXTA',
+		dayOfWeek: 5,
+		exercises: [
+			{
+				...exercises.frontSquat,
+				kind: 'strength',
+				prescription: '4 x 10',
+				benchmark: 'frontSquat1Rm',
+				weightPercent: 50
 			},
 			{
 				...exercises.pullUps,
-				kind: 'warmup',
-				prescription: '3 x 10'
+				kind: 'strength',
+				prescription: '5 x MAX'
 			},
 			{
-				...exercises.bulgarianSquat,
-				kind: 'warmup',
-				prescription: '3 x 6 + 6'
+				...exercises.kneelingOneArmDbPress,
+				prescription: '3 x 10 + 10'
 			},
 			{
-				...exercises.lateralMedballThrow,
-				kind: 'power',
-				prescription: '3 x 6 + 6'
+				...exercises.kbSwing,
+				prescription: '3 x 12'
+			},
+			{
+				...exercises.oneArmOverheadSquat,
+				prescription: '3 x 8 + 8'
+			},
+			{
+				...exercises.bandedTwist,
+				prescription: '3 x 8 + 8'
 			}
 		]
 	}
-	// {
-	// 	title: 'SEXTA',
-	// 	dayOfWeek: 5,
-	// 	exercises: [
-	// 		{
-	// 			...exercises.rdl,
-	// 			kind: 'strength',
-	// 			prescription: '3 x 5',
-	// 			weightText: '60kg+'
-	// 		},
-	// 		{
-	// 			...exercises.frontSquat,
-	// 			kind: 'strength',
-	// 			prescription: '3 x 5',
-	// 			benchmark: 'frontSquat1Rm',
-	// 			weightPercent: 70
-	// 		},
-	// 		{
-	// 			...exercises.oneArmBenchPress,
-	// 			kind: 'warmup',
-	// 			prescription: '3 x 8 + 8'
-	// 		},
-	// 		{
-	// 			...exercises.shoulderComplex,
-	// 			kind: 'warmup',
-	// 			prescription: '3 x 10 + 10 + 10'
-	// 		},
-	// 		{
-	// 			...exercises.lateralStepUp,
-	// 			kind: 'warmup',
-	// 			prescription: '3 x 6 + 6'
-	// 		}
-	// 	]
-	// }
 ];
 
 export const customProgram: Program = mainProgram;
