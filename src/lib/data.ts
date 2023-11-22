@@ -253,7 +253,7 @@ export const mainProgram: Program = [
 				kind: 'strength',
 				prescription: '4 x 10',
 				benchmark: 'backSquat1Rm',
-				weightPercent: 50
+				weightPercent: 65
 			},
 			{
 				...exercises.oneArmBenchPress,
@@ -282,14 +282,14 @@ export const mainProgram: Program = [
 				kind: 'strength',
 				prescription: '4 x 10',
 				benchmark: 'deadlift1Rm',
-				weightPercent: 50
+				weightPercent: 65
 			},
 			{
 				...exercises.pushPress,
 				kind: 'strength',
 				prescription: '4 x 10',
 				benchmark: 'shoulderPress1Rm',
-				weightPercent: 50
+				weightPercent: 65
 			},
 			{
 				...exercises.oneArmDbRow,
@@ -323,7 +323,7 @@ export const mainProgram: Program = [
 				kind: 'strength',
 				prescription: '4 x 10',
 				benchmark: 'benchPress1Rm',
-				weightPercent: 50
+				weightPercent: 65
 			},
 			{
 				...exercises.lateralRipTap,
@@ -352,7 +352,7 @@ export const mainProgram: Program = [
 				kind: 'strength',
 				prescription: '4 x 10',
 				benchmark: 'frontSquat1Rm',
-				weightPercent: 50
+				weightPercent: 65
 			},
 			{
 				...exercises.pullUps,
