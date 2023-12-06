@@ -163,7 +163,7 @@ export const exercises = {
 	},
 	oneArmDbRow: {
 		name: '1 ARM DB ROW',
-		media: `${IMAGE_URL_PREFIX}/one-arm-db-row.gif`
+		media: `${IMAGE_URL_PREFIX}/1-arm-db-row.gif`
 	},
 	abWheelRollout: {
 		name: 'AB WHEEL ROLLOUT',
@@ -171,11 +171,23 @@ export const exercises = {
 	},
 	bandedGoodMorning: {
 		name: 'BANDED GOOD MORNING',
-		media: `${IMAGE_URL_PREFIX}/band-good-morning.gif`
+		media: `${IMAGE_URL_PREFIX}/banded-good-morning.gif`
 	},
 	bandedTwist: {
 		name: 'BANDED TWIST',
 		media: `${IMAGE_URL_PREFIX}/banded-twist.gif`
+	},
+	backExtension: {
+		name: 'BACK EXTENSION',
+		media: `${IMAGE_URL_PREFIX}/back-extension.gif`
+	},
+	lateralRipTap: {
+		name: 'LATERAL RIP TAP',
+		media: `${IMAGE_URL_PREFIX}/lateral-rip-tap.gif`
+	},
+	oneArmOverheadSquat: {
+		name: 'ONE ARM OVERHEAD SQUAT',
+		media: `${IMAGE_URL_PREFIX}/1-arm-overhead-squat.gif`
 	},
 	// TODO: missing video
 	coolDown: {
@@ -209,18 +221,6 @@ export const exercises = {
 	rdl: {
 		name: 'RDL'
 		// media: `${IMAGE_URL_PREFIX}/rdl.gif`
-	},
-	backExtension: {
-		name: 'BACK EXTENSION'
-		// media: `${IMAGE_URL_PREFIX}/back-extension.gif`
-	},
-	lateralRipTap: {
-		name: 'LATERAL RIP TAP'
-		// media: `${IMAGE_URL_PREFIX}/lateral-rip-tap.gif`
-	},
-	oneArmOverheadSquat: {
-		name: 'ONE ARM OVERHEAD SQUAT'
-		// media: `${IMAGE_URL_PREFIX}/one-arm-overhead-squat.gif`
 	}
 };
 
